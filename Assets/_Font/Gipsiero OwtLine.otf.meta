@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 43de6598686d42f4d92c5d85376be828
+timeCreated: 1522413617
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gipsiero Owtline
+  fontNames:
+  - Gipsiero Owtline
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

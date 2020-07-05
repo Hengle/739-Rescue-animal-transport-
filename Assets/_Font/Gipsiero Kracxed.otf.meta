@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0aab6854feee95040afda62f9d45a675
+timeCreated: 1522413617
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gipsiero
+  fontNames:
+  - Gipsiero
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

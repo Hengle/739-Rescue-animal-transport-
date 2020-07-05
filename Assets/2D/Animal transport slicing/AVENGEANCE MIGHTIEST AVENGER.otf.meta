@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 93f9caab8623b5e4cabcaddca470f1e1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Avengeance Mightiest Avenger
+  fontNames:
+  - Avengeance Mightiest Avenger
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 00597e34062e4534c89bd36381081c3e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

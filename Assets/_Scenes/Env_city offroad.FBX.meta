@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: 3c82da4a0b6277f4b9278b2655a32ec3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bridge
+    100002: bridge 1
+    100004: bridge 2
+    100006: bridge 3
+    100008: bridge 4
+    100010: bridge 5
+    100012: //RootNode
+    100014: Group071
+    100016: Group072
+    100018: Line001
+    100020: Line005
+    100022: Line007
+    100024: Line008
+    100026: Line010
+    100028: Line011
+    100030: Line012
+    100032: Line013
+    100034: Line015
+    100036: Line018
+    100038: Line019
+    100040: Line020
+    100042: Line021
+    100044: Line022
+    100046: Line039
+    100048: Line041
+    100050: Line043
+    100052: Line044
+    100054: Line046
+    100056: Line048
+    100058: Line082
+    100060: Line083
+    100062: Line084
+    100064: Line085
+    100066: Line086
+    100068: Line087
+    100070: Line091
+    100072: Line092
+    100074: Line093
+    100076: Line094
+    100078: Line095
+    100080: Line096
+    100082: Line097
+    100084: Line098
+    100086: Object001
+    100088: Object003
+    100090: Object004
+    100092: Object005
+    100094: Object007
+    100096: Object008
+    100098: Object009
+    100100: Object010
+    100102: Object011
+    100104: Object012
+    100106: Object013
+    100108: Object027
+    100110: Object028
+    100112: Object029
+    100114: Object030
+    100116: Object031
+    100118: Object032
+    100120: Object033
+    100122: Object034
+    100124: Object035
+    100126: Object036
+    100128: Object037
+    100130: Object038
+    100132: Object039
+    100134: Object040
+    100136: Object041
+    100138: Object042
+    100140: Object043
+    100142: Object045
+    100144: Object049
+    100146: Object050
+    100148: Object083
+    100150: Object409
+    100152: Object410
+    100154: Plane001
+    100156: Plane010
+    100158: Plane013
+    100160: Plane019
+    100162: Plane020
+    100164: Rectangle001
+    100166: Shape009
+    100168: Shape010
+    100170: Shape011
+    100172: Shape012
+    100174: Shape018
+    100176: Shape019
+    100178: Shape020
+    400000: bridge
+    400002: bridge 1
+    400004: bridge 2
+    400006: bridge 3
+    400008: bridge 4
+    400010: bridge 5
+    400012: //RootNode
+    400014: Group071
+    400016: Group072
+    400018: Line001
+    400020: Line005
+    400022: Line007
+    400024: Line008
+    400026: Line010
+    400028: Line011
+    400030: Line012
+    400032: Line013
+    400034: Line015
+    400036: Line018
+    400038: Line019
+    400040: Line020
+    400042: Line021
+    400044: Line022
+    400046: Line039
+    400048: Line041
+    400050: Line043
+    400052: Line044
+    400054: Line046
+    400056: Line048
+    400058: Line082
+    400060: Line083
+    400062: Line084
+    400064: Line085
+    400066: Line086
+    400068: Line087
+    400070: Line091
+    400072: Line092
+    400074: Line093
+    400076: Line094
+    400078: Line095
+    400080: Line096
+    400082: Line097
+    400084: Line098
+    400086: Object001
+    400088: Object003
+    400090: Object004
+    400092: Object005
+    400094: Object007
+    400096: Object008
+    400098: Object009
+    400100: Object010
+    400102: Object011
+    400104: Object012
+    400106: Object013
+    400108: Object027
+    400110: Object028
+    400112: Object029
+    400114: Object030
+    400116: Object031
+    400118: Object032
+    400120: Object033
+    400122: Object034
+    400124: Object035
+    400126: Object036
+    400128: Object037
+    400130: Object038
+    400132: Object039
+    400134: Object040
+    400136: Object041
+    400138: Object042
+    400140: Object043
+    400142: Object045
+    400144: Object049
+    400146: Object050
+    400148: Object083
+    400150: Object409
+    400152: Object410
+    400154: Plane001
+    400156: Plane010
+    400158: Plane013
+    400160: Plane019
+    400162: Plane020
+    400164: Rectangle001
+    400166: Shape009
+    400168: Shape010
+    400170: Shape011
+    400172: Shape012
+    400174: Shape018
+    400176: Shape019
+    400178: Shape020
+    2100000: 'Material #25'
+    2100002: 'Material #29'
+    2100004: 'Material #34'
+    2100006: 'Material #27'
+    2100008: 'Material #31'
+    2100010: 'Material #32'
+    2100012: 'Material #33'
+    2100014: 'Material #77'
+    2100016: No Name
+    2100018: 'Material #604'
+    2300000: bridge
+    2300002: bridge 1
+    2300004: bridge 2
+    2300006: bridge 3
+    2300008: bridge 4
+    2300010: bridge 5
+    2300012: Line001
+    2300014: Line005
+    2300016: Line007
+    2300018: Line008
+    2300020: Line010
+    2300022: Line011
+    2300024: Line012
+    2300026: Line013
+    2300028: Line015
+    2300030: Line018
+    2300032: Line019
+    2300034: Line020
+    2300036: Line021
+    2300038: Line022
+    2300040: Line039
+    2300042: Line041
+    2300044: Line043
+    2300046: Line044
+    2300048: Line046
+    2300050: Line048
+    2300052: Line082
+    2300054: Line083
+    2300056: Line084
+    2300058: Line085
+    2300060: Line086
+    2300062: Line087
+    2300064: Line091
+    2300066: Line092
+    2300068: Line093
+    2300070: Line094
+    2300072: Line095
+    2300074: Line096
+    2300076: Line097
+    2300078: Line098
+    2300080: Object001
+    2300082: Object003
+    2300084: Object004
+    2300086: Object005
+    2300088: Object007
+    2300090: Object008
+    2300092: Object009
+    2300094: Object010
+    2300096: Object011
+    2300098: Object012
+    2300100: Object013
+    2300102: Object027
+    2300104: Object028
+    2300106: Object029
+    2300108: Object030
+    2300110: Object031
+    2300112: Object032
+    2300114: Object033
+    2300116: Object034
+    2300118: Object035
+    2300120: Object036
+    2300122: Object037
+    2300124: Object038
+    2300126: Object039
+    2300128: Object040
+    2300130: Object041
+    2300132: Object042
+    2300134: Object043
+    2300136: Object045
+    2300138: Object049
+    2300140: Object050
+    2300142: Object083
+    2300144: Object409
+    2300146: Object410
+    2300148: Plane001
+    2300150: Plane010
+    2300152: Plane013
+    2300154: Plane019
+    2300156: Plane020
+    2300158: Rectangle001
+    2300160: Shape012
+    3300000: bridge
+    3300002: bridge 1
+    3300004: bridge 2
+    3300006: bridge 3
+    3300008: bridge 4
+    3300010: bridge 5
+    3300012: Line001
+    3300014: Line005
+    3300016: Line007
+    3300018: Line008
+    3300020: Line010
+    3300022: Line011
+    3300024: Line012
+    3300026: Line013
+    3300028: Line015
+    3300030: Line018
+    3300032: Line019
+    3300034: Line020
+    3300036: Line021
+    3300038: Line022
+    3300040: Line039
+    3300042: Line041
+    3300044: Line043
+    3300046: Line044
+    3300048: Line046
+    3300050: Line048
+    3300052: Line082
+    3300054: Line083
+    3300056: Line084
+    3300058: Line085
+    3300060: Line086
+    3300062: Line087
+    3300064: Line091
+    3300066: Line092
+    3300068: Line093
+    3300070: Line094
+    3300072: Line095
+    3300074: Line096
+    3300076: Line097
+    3300078: Line098
+    3300080: Object001
+    3300082: Object003
+    3300084: Object004
+    3300086: Object005
+    3300088: Object007
+    3300090: Object008
+    3300092: Object009
+    3300094: Object010
+    3300096: Object011
+    3300098: Object012
+    3300100: Object013
+    3300102: Object027
+    3300104: Object028
+    3300106: Object029
+    3300108: Object030
+    3300110: Object031
+    3300112: Object032
+    3300114: Object033
+    3300116: Object034
+    3300118: Object035
+    3300120: Object036
+    3300122: Object037
+    3300124: Object038
+    3300126: Object039
+    3300128: Object040
+    3300130: Object041
+    3300132: Object042
+    3300134: Object043
+    3300136: Object045
+    3300138: Object049
+    3300140: Object050
+    3300142: Object083
+    3300144: Object409
+    3300146: Object410
+    3300148: Plane001
+    3300150: Plane010
+    3300152: Plane013
+    3300154: Plane019
+    3300156: Plane020
+    3300158: Rectangle001
+    3300160: Shape012
+    4300000: Plane001
+    4300002: Plane010
+    4300004: Object001
+    4300006: Object003
+    4300008: Object004
+    4300010: Object005
+    4300012: Object007
+    4300014: Object008
+    4300016: Object009
+    4300018: Object010
+    4300020: Object011
+    4300022: Object012
+    4300024: Object013
+    4300026: Object027
+    4300028: Object028
+    4300030: Object029
+    4300032: Object030
+    4300034: Object031
+    4300036: Object032
+    4300038: Object033
+    4300040: Line001
+    4300042: Line005
+    4300044: Line007
+    4300046: Line008
+    4300048: Line010
+    4300050: Line011
+    4300052: Line012
+    4300054: Line013
+    4300056: Line015
+    4300058: Line018
+    4300060: Line019
+    4300062: Line020
+    4300064: Line021
+    4300066: Line022
+    4300068: Plane013
+    4300070: Shape012
+    4300072: Line044
+    4300074: Line046
+    4300076: Line048
+    4300078: Object043
+    4300080: Plane020
+    4300082: Line039
+    4300084: Object037
+    4300086: Object036
+    4300088: Object049
+    4300090: Object041
+    4300092: Line041
+    4300094: Object040
+    4300096: Object042
+    4300098: Object050
+    4300100: Plane019
+    4300102: Line043
+    4300104: Object045
+    4300106: Object039
+    4300108: Object034
+    4300110: Object035
+    4300112: Object038
+    4300114: Rectangle001
+    4300116: Line082
+    4300118: Line083
+    4300120: Line084
+    4300122: Line085
+    4300124: Line086
+    4300126: Line087
+    4300128: Object083
+    4300130: Line091
+    4300132: Line092
+    4300134: Line093
+    4300136: Line094
+    4300138: Line095
+    4300140: Line096
+    4300142: Line097
+    4300144: bridge
+    4300146: bridge
+    4300148: bridge
+    4300150: bridge
+    4300152: bridge
+    4300154: bridge
+    4300156: Object409
+    4300158: Object410
+    4300160: Line098
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: 65a67aa69d47dbc41b54905998b421af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #27'
+    second: {fileID: 2100000, guid: 8ea6c3ecb5108f4438634cde8248a837, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #29'
+    second: {fileID: 2100000, guid: f00a7e11ced43714cb92bd3480dfebd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #31'
+    second: {fileID: 2100000, guid: 4bf394bea8ec8cb439319d2ec129c114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #32'
+    second: {fileID: 2100000, guid: 2ba7f3a86c5a3bf4fbd7cd24d7f15ef1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #33'
+    second: {fileID: 2100000, guid: 8101816d6f59d594797f6ea6d9958228, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #34'
+    second: {fileID: 2100000, guid: 520b7cf3fb759674886e353e5e3669a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #604'
+    second: {fileID: 2100000, guid: f9a814cc99f992c42a636e43ed14250e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #77'
+    second: {fileID: 2100000, guid: a6c2d57ed6d46f743b72e1b66ef726cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 1be058587e7c05d44a402ddaee78f21f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 2
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.30479997
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

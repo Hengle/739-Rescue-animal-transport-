@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 3c619d681ca0a8f4dacc8f56155a99a9
+timeCreated: 1553669135
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Arezzo-Cd
+  fontNames:
+  - Arezzo-Cd
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2aa2c4c7c6f77ef4db872e4b2436f83d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

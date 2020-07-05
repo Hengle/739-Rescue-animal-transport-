@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1317493494672420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4109696965027484}
+  - component: {fileID: 114464300915848724}
+  m_Layer: 0
+  m_Name: MeshCombineStudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4109696965027484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317493494672420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 274.33542, y: 274.33542, z: 274.33542}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114464300915848724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317493494672420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7fb52db265e28e4eb22d6300d01e030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combinedList: []
+  cellSize: 32
+  useVertexOutputLimit: 0
+  vertexOutputLimit: 65534
+  lodObjectCount: 6c4f0000
+  lodObjectSearchCount: 6d4f0000
+  combineInRuntime: 0
+  combineOnStart: 1
+  useCombineSwapKey: 1
+  combineSwapKey: 9
+  originalObjects: 1
+  originalObjectsLODGroups: 1
+  addMeshColliders: 0
+  lodAmount: 1
+  lodSearchText: LOD
+  searchOptions:
+    parent: {fileID: 0}
+    drawGizmos: 1
+    searchBoxGridX: 1
+    searchBoxGridY: 1
+    searchBoxGridZ: 1
+    searchBoxSquare: 0
+    useVertexInputLimit: 0
+    vertexInputLimit: 1
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useTag: 0
+    tag: 
+    nameContains: 0
+    nameContainList: []
+    onlyStatic: 0
+  oldPosition: {x: 0, y: 0, z: 0}
+  oldScale: {x: 274.33542, y: 274.33542, z: 274.33542}
+  combined: 0
+  combinedLODManager: {fileID: 0}
+  combinedActive: 1

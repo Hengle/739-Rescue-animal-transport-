@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4b13b7a606e332741ba3a129f6ec165b
+timeCreated: 1522413617
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: geometric
+  fontNames:
+  - geometric
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
