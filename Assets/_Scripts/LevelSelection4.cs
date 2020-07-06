@@ -63,7 +63,7 @@ public class LevelSelection4 : MonoBehaviour
             //NormelImg=Levels.transform.GetChild(no-1).gameObject.GetComponent<Image>().sprite;
             //Levels.transform.GetChild(no - 1).gameObject.GetComponent<Image>().sprite = HoverImgs[no-1];
 
-           //   //CustomAnalytics.logLevelStarted("LevelSelection", lastno + "");
+           CustomAnalytics.logLevelStarted("LevelSelection", lastno + "");
             lastno = no;
 			print ("level No" +lastno);
 			OnPlay ();
@@ -71,27 +71,27 @@ public class LevelSelection4 : MonoBehaviour
 	}
     public void level_1()
     {
-        //  //CustomAnalytics.logLevelStarted("LevelSelection", "1");
+        CustomAnalytics.logLevelStarted("LevelSelection", "1");
     }
     public void level_2()
     {
-        //  //CustomAnalytics.logLevelStarted("LevelSelection", "2");
+        CustomAnalytics.logLevelStarted("LevelSelection", "2");
     }
     public void level_3()
     {
-        //  //CustomAnalytics.logLevelStarted("LevelSelection", "3");
+       CustomAnalytics.logLevelStarted("LevelSelection", "3");
     }
     public void level_4()
     {
-        //  //CustomAnalytics.logLevelStarted("LevelSelection", "4");
+        CustomAnalytics.logLevelStarted("LevelSelection", "4");
     }
     public void level_5()
     {
-        //  //CustomAnalytics.logLevelStarted("LevelSelection", "5");
+        CustomAnalytics.logLevelStarted("LevelSelection", "5");
     }
     public void level_6()
     {
-        //  //CustomAnalytics.logLevelStarted("LevelSelection", "6");
+        CustomAnalytics.logLevelStarted("LevelSelection", "6");
     }
     public void OnPlay ()
 	{
@@ -109,8 +109,8 @@ public class LevelSelection4 : MonoBehaviour
 	}
     public void unlock_All()
     {
-      //  InApp_Manager.instance.Buy_UnlockAll_Levels();
-       // PlayerPrefs.SetInt("DUnlockLevels", 5);
+        InApp_Manager.instance.Buy_UnlockAll_Levels();
+        PlayerPrefs.SetInt("DUnlockLevels", 5);
     }
     void wait ()
 	{

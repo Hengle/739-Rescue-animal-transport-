@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ 
 public class MainMenu : MonoBehaviour {
 	public GameObject _exitpannel;
     public GameObject PurchaseAdd;
     // Use this for initialization
     public void Awake()
     {
-       
-        //if(PlayerPrefManager.Instance.IsAdsRemoved())
-        //PurchaseAdd.SetActive(false);
+
+        if (PlayerPrefManager.Instance.IsAdsRemoved())
+            PurchaseAdd.SetActive(false);
     }
     public void RemoveAdd()
     {
@@ -22,25 +22,25 @@ public class MainMenu : MonoBehaviour {
 	}
 	public void _play()
 	{
-		  //CustomAnalytics.logLevelStarted ("OnPlay","MainMenu");
+		  CustomAnalytics.logLevelStarted ("OnPlay","MainMenu");
 		Application.LoadLevel ("LevelSelection");
 
 	}
 	public void yes()
 	{
-		  //CustomAnalytics.logLevelStarted ("OnExit","Yes");
+		  CustomAnalytics.logLevelStarted ("OnExit","Yes");
 		Application.Quit ();
 	}
 	public void no()
 	{
-	  //CustomAnalytics.logLevelStarted ("OnExit","No");
+	  CustomAnalytics.logLevelStarted ("OnExit","No");
 	//	AdsMainManagerController.instance.Load_Banner_Ad();
 	//	AdCallingHelper.AdCallingHelper_ins.HideBigBanner ();
 		_exitpannel.SetActive (false);
 	}
 	public void _exit()
 	{
-		  //CustomAnalytics.logLevelStarted ("OnExit","MainMenu");
+		  CustomAnalytics.logLevelStarted ("OnExit","MainMenu");
   //      AdLoadWarning.Instance.CallAdWarning(AdsMainManagerController.AdType.EXIT);
         _exitpannel.SetActive (true);
 	}
@@ -48,14 +48,14 @@ public class MainMenu : MonoBehaviour {
 	public void _rateus()
 	{
 
-	  //CustomAnalytics.logLevelStarted ("MainMenu","RateUS");
+	  CustomAnalytics.logLevelStarted ("MainMenu","RateUS");
    //     GaminatorAds.Instance.RateUs();
 	//    AGameUtils.rateUsLink ();
 	}
 
 	public void _moregame()
 	{
-		  //CustomAnalytics.logLevelStarted ("MainMenu","More");
+		  CustomAnalytics.logLevelStarted ("MainMenu","More");
      //   GaminatorAds.Instance.MoreApps();
         //AGameUtils.moreAppsLink ();
     }

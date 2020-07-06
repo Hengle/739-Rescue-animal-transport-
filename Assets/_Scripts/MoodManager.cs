@@ -53,7 +53,7 @@ public class MoodManager : MonoBehaviour {
 	{
 		
         //AdLoadWarning.Instance.CallAdWarning(AdsMainManagerController.AdType.SELECTION);
-       //  //CustomAnalytics.logLevelStarted("Pause", "Gameplay");
+       CustomAnalytics.logLevelStarted("Pause", "Gameplay");
         Invoke("timee", 0f);
         _pausepannel.SetActive (true);
 	}
@@ -64,7 +64,7 @@ public class MoodManager : MonoBehaviour {
 		Time.timeScale = 1f;
 		_pausepannel.SetActive (false);
 		
-		  //CustomAnalytics.logLevelStarted ("PausePanel","resumebtn");
+		 CustomAnalytics.logLevelStarted ("PausePanel","resumebtn");
 	}
 
 	public void _restart()
@@ -73,7 +73,7 @@ public class MoodManager : MonoBehaviour {
 		Time.timeScale = 1f;
 		Application.LoadLevel ("Gameplay");
 		
-		  //CustomAnalytics.logLevelStarted ("Gameplay","_restart");
+		 CustomAnalytics.logLevelStarted ("Gameplay","_restart");
 	}
 	public void _home()
 	{
@@ -81,7 +81,7 @@ public class MoodManager : MonoBehaviour {
 		Time.timeScale = 1f;
 		Application.LoadLevel ("MainMenu");
 		
-		  //CustomAnalytics.logLevelStarted ("gameplay","homebtn");
+		CustomAnalytics.logLevelStarted ("gameplay","homebtn");
 	}
 
 	public void _Next()
@@ -171,7 +171,7 @@ public class MoodManager : MonoBehaviour {
 
 		}
 		//AdCallingHelper.AdCallingHelper_ins.HideBigBanner ();
-		  //CustomAnalytics.logLevelStarted ("complete","nextbtn");
+		 CustomAnalytics.logLevelStarted ("complete","nextbtn");
 	}
 
 	// Update is called once per frame

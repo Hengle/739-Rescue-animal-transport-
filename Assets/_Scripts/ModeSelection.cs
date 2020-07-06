@@ -11,7 +11,7 @@ public class ModeSelection : MonoBehaviour {
 	
 	public void _horsemood()
 	{
-	    //  //CustomAnalytics.logLevelStarted ("ModSelection","Zebra");
+	    CustomAnalytics.logLevelStarted ("ModSelection","Zebra");
 		PlayerPrefs.SetInt ("MHorse",1);
 		PlayerPrefs.SetInt ("MLion",0);
 		PlayerPrefs.SetInt ("MSheep",0);
@@ -24,7 +24,7 @@ public class ModeSelection : MonoBehaviour {
 
 	public void _lionemood()
 	{
-     	  //CustomAnalytics.logLevelStarted ("ModSelection","Lionmood");
+     	  CustomAnalytics.logLevelStarted ("ModSelection","Lionmood");
 		PlayerPrefs.SetInt ("MHorse",0);
 		PlayerPrefs.SetInt ("MLion",1);
 		PlayerPrefs.SetInt ("MSheep",0);
@@ -36,7 +36,7 @@ public class ModeSelection : MonoBehaviour {
 
 	public void _sheepemood()
 	{
-		  //CustomAnalytics.logLevelStarted ("ModSelection","sheepemood");
+		  CustomAnalytics.logLevelStarted ("ModSelection","sheepemood");
 		PlayerPrefs.SetInt ("MHorse",0);
 		PlayerPrefs.SetInt ("MLion",0);
 		PlayerPrefs.SetInt ("MSheep",1);
@@ -48,7 +48,7 @@ public class ModeSelection : MonoBehaviour {
 
 	public void _cowmood()
 	{
-	  //CustomAnalytics.logLevelStarted ("ModSelection","cowmood");
+	  CustomAnalytics.logLevelStarted ("ModSelection","cowmood");
 		PlayerPrefs.SetInt ("MHorse",0);
 		PlayerPrefs.SetInt ("MLion",0);
 		PlayerPrefs.SetInt ("MSheep",0);
@@ -60,7 +60,7 @@ public class ModeSelection : MonoBehaviour {
 
 	public void _Deermood()
 	{
-		  //CustomAnalytics.logLevelStarted ("ModSelection","Deermood");
+		 CustomAnalytics.logLevelStarted ("ModSelection","Deermood");
 		PlayerPrefs.SetInt ("MHorse",0);
 		PlayerPrefs.SetInt ("MLion",0);
 		PlayerPrefs.SetInt ("MSheep",0);
@@ -72,7 +72,7 @@ public class ModeSelection : MonoBehaviour {
 
 	public void _Dogmood()
 	{
-		  //CustomAnalytics.logLevelStarted ("ModSelection","TigerMod");
+		 CustomAnalytics.logLevelStarted ("ModSelection","TigerMod");
 		PlayerPrefs.SetInt ("MHorse",0);
 		PlayerPrefs.SetInt ("MLion",0);
 		PlayerPrefs.SetInt ("MSheep",0);
@@ -84,7 +84,7 @@ public class ModeSelection : MonoBehaviour {
 
 	public void _back()
 	{
-		  //CustomAnalytics.logLevelStarted ("levelBackBtn","ModSelection");
+		 CustomAnalytics.logLevelStarted ("levelBackBtn","ModSelection");
 		Application.LoadLevel ("MainMenu");
 	}
 

@@ -47,7 +47,7 @@ public class detectanimal : MonoBehaviour {
                 int currentlevel = PlayerPrefs.GetInt ("SLevel");
 				PlayerPrefs.SetInt ("SUnlockLevels", currentlevel+1);
                 print("HUSSAIN1");
-               ////CustomAnalytics.logLevelCompleted ("Success", PlayerPrefs.GetInt("SLevel") + "");
+               CustomAnalytics.logLevelCompleted ("Success", PlayerPrefs.GetInt("SLevel") + "");
 
 			}
 
@@ -60,7 +60,7 @@ public class detectanimal : MonoBehaviour {
                 int currentlevel = PlayerPrefs.GetInt ("CLevel");
 				PlayerPrefs.SetInt ("CUnlockLevels", currentlevel+1);
                 print("HUSSAIN2");
-               ////CustomAnalytics.logLevelCompleted ("Success", PlayerPrefs.GetInt("CLevel")+ "");
+               CustomAnalytics.logLevelCompleted ("Success", PlayerPrefs.GetInt("CLevel")+ "");
 
 			}
 
@@ -73,7 +73,7 @@ public class detectanimal : MonoBehaviour {
                 int currentlevel = PlayerPrefs.GetInt("DLevel");
 				PlayerPrefs.SetInt ("DUnlockLevels", currentlevel+1);
                 print("HUSSAIN3");
-               ////CustomAnalytics.logLevelCompleted ("Success", PlayerPrefs.GetInt("DLevel") + "");
+              CustomAnalytics.logLevelCompleted ("Success", PlayerPrefs.GetInt("DLevel") + "");
 
 			}
 
@@ -86,7 +86,7 @@ public class detectanimal : MonoBehaviour {
                 int currentlevel = PlayerPrefs.GetInt ("DogLevel");
 				PlayerPrefs.SetInt ("DogUnlockLevels", currentlevel+1);
                 print("HUSSAIN4");
-               ////CustomAnalytics.logLevelCompleted ("Success",PlayerPrefs.GetInt("DogLevel") +"");
+              CustomAnalytics.logLevelCompleted ("Success",PlayerPrefs.GetInt("DogLevel") +"");
 
 			}
 
