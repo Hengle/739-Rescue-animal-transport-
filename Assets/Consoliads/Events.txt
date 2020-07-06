@@ -1,0 +1,23 @@
+Example-> level_started_Play_MainMenu
+
+CustomAnalytics.logLevelStarted("Play ", "MainMenu");
+ CustomAnalytics.logLevelStarted("Spin ", "1");
+CustomAnalytics.logLevelStarted("More ", "MainMenu");
+CustomAnalytics.logLevelStarted("Rate ", "MainMenu");
+CustomAnalytics.logLevelStarted("Exit ", "MainMenu");
+ CustomAnalytics.logLevelStarted("Exit_Yes", "MainMenu");
+ CustomAnalytics.logLevelStarted("Exit_No", "MainMenu");
+CustomAnalytics.logLevelStarted("Select","Mission1");
+CustomAnalytics.logLevelStarted("Select","Mission2");
+CustomAnalytics.logLevelStarted("Select","The City 1");
+CustomAnalytics.logLevelStarted("Select","Back");
+CustomAnalytics.logLevelStarted("Select", "Spin");
+CustomAnalytics.logLevelStarted("Level", GlobalScripts.CurrLevelIndex.ToString());
+CustomAnalytics.logLevelStarted("GamePlay_Home", GlobalScripts.CurrLevelIndex.ToString());
+CustomAnalytics.logLevelStarted("GamePlay_Pause", GlobalScripts.CurrLevelIndex.ToString());
+CustomAnalytics.logLevelStarted("GamePlay_Restart", GlobalScripts.CurrLevelIndex.ToString());
+CustomAnalytics.logLevelStarted("GamePlay_Next", GlobalScripts.CurrLevelIndex.ToString());
+CustomAnalytics.logLevelStarted("GamePlay_Spin", GlobalScripts.CurrLevelIndex.ToString());
+CustomAnalytics.logLevelStarted("GamePlay_Success", GlobalScripts.CurrLevelIndex.ToString());
+CustomAnalytics.logLevelStarted("GamePlay_Fail", GlobalScripts.CurrLevelIndex.ToString());
+CustomAnalytics.logLevelStarted("GamePlay_TimeUp", GlobalScripts.CurrLevelIndex.ToString());

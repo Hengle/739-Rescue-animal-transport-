@@ -1,0 +1,9 @@
+﻿<dependencies>
+  <androidPackages>
+    <androidPackage spec="com.google.android.gms:play-services-ads:19.1.0">
+      <repositories>
+        <repository>https://maven.google.com/</repository>
+      </repositories>
+    </androidPackage>
+  </androidPackages>
+</dependencies>

@@ -24,7 +24,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_17;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_EVENT_QUEUE;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_AR;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;UNITY_ASTC_ONLY_DECOMPRESS;ANDROID_USE_SWAPPY;ENABLE_ONSCREEN_KEYBOARD;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CROSS_PLATFORM_INPUT;MOBILE_INPUT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_17;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_INCLUDE_TESTS;UNITY_PURCHASING;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_EVENT_QUEUE;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_AR;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;UNITY_ASTC_ONLY_DECOMPRESS;ANDROID_USE_SWAPPY;ENABLE_ONSCREEN_KEYBOARD;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CROSS_PLATFORM_INPUT;MOBILE_INPUT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -106,6 +106,45 @@
     <Compile Include="Assets\2D\Water (Pro Only)\Water4\Sources\Scripts\WaterBase.cs" />
     <Compile Include="Assets\3D\water\triggerscript.cs" />
     <Compile Include="Assets\3D\water\Water.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\BackToMainMenuAd.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\CustomAnalytics.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\FirebaseInitial.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\GaminatorAds.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\GaminatorIconAd.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\GaminatorNativeAd.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\InApp_Manager.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\MoreGames.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\PanelAds.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\PlayerPrefManager.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\PrivacyPolicyAd.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\RateUS.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\SelectionSceneAds.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\ShowBanner.cs" />
+    <Compile Include="Assets\Consoliads\InGameAdsScripts\TestAdsScript.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CAAdnetworkUtils.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CABannerMediationDetails.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CAConstants.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CAIconMediationDetails.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CAInspectorAdNetworkIDs.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CAInteractiveMediationDetails.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CAInterstitialMediationDetails.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CALogManager.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CANativeMediationDetails.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CARewardedVideoMediationDetails.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\CAScene.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\ConsoliAds.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\ConsoliAdsBannerView.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\ConsoliAdsMediationWrapper.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\EnumOrder.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\EnumOrderDrawer.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\Scripts\AdsConsentFirstController.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\Scripts\AGameUtils.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\Scripts\GameId.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\Scripts\Privacy_PolicyUIText.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\Scripts\PrivacyTextGetter.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\Scripts\StringCipher.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\ServerConfig.cs" />
+    <Compile Include="Assets\Consoliads\Scripts\SimpleJSON.cs" />
     <Compile Include="Assets\External Plugins\MeshCombineStudio\Scripts\Mesh\CombinedLODManager.cs" />
     <Compile Include="Assets\External Plugins\MeshCombineStudio\Scripts\Mesh\ListLODGroups.cs" />
     <Compile Include="Assets\External Plugins\MeshCombineStudio\Scripts\Mesh\ListMeshVertCount.cs" />
@@ -146,6 +185,39 @@
     <Compile Include="Assets\External Plugins\SuperCombiner\Scripts\Utils\SuperCombinerSettings.cs" />
     <Compile Include="Assets\External Plugins\SuperCombiner\Scripts\Utils\TextureImportSettings.cs" />
     <Compile Include="Assets\External Plugins\SuperCombiner\Scripts\Utils\TextureScale.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GAInitialize.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GetRemoteConfigsValueAsString.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\IsRemoteConfigsReady.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendBusinessEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendDesignEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendErrorEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendProgressionEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendResourceEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetCustomDimension.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Enums.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Ads.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Business.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Debug.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Design.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Error.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Progression.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Resource.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Setup.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_SpecialEvents.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GAValidator.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\GameAnalytics.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Mopub\GAMopubIntegration.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Setup\Settings.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\State\GAState.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Utilities\GA_MiniJson.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_AndroidWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_iOSWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_MonoWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_TizenWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_tvOSWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_UWPWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_WebGLWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_Wrapper.cs" />
     <Compile Include="Assets\iTS\Demo\Locomotion Setup\Locomotion\Scripts\Locomotion.cs" />
     <Compile Include="Assets\iTS\Demo\Locomotion Setup\Scripts\PedestrianController.cs" />
     <Compile Include="Assets\iTS\Simple Car Physics\Scripts\TSAntiRollBar.cs" />
@@ -457,6 +529,7 @@
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\ScreenSpaceAmbientObscurance.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_Antialiasing\NFAA.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+    <None Include="Assets\GameAnalytics\Readme.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
     <None Include="Assets\External Plugins\SuperCombiner\Documentation\ChangeLog.txt" />
@@ -478,6 +551,7 @@
     <None Include="Assets\2D\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
     <None Include="Assets\SWS\Examples\Assets\Shaders\DiffuseReflectiveShader.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\iTS\Demo\Source Assets\Skyboxes\_skybox info.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\frag_ao.cginc" />
     <None Include="Assets\SWS\Extensions\DOTween\DOTween46.xml" />
@@ -497,6 +571,7 @@
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\GlowEffectDownsample.shader" />
     <None Include="Assets\African Animal Pack 1\Crocodile\Crocodile_02\Model\CrocodileLP_02.txt" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\CreaseApply.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\ChromaticAberrationShader.shader" />
     <None Include="Assets\African Animal Pack 1\Lioness\Model\lioness_RM.txt" />
@@ -507,6 +582,7 @@
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\ColorCorrectionSelective.shader" />
     <None Include="Assets\African Animal Pack 1\Crocodile\Crocodile_01\Model\CrocodileLP_01.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+    <None Include="Assets\StreamingAssets\TNLoadText.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\CameraMotionBlurDX11.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
@@ -537,6 +613,8 @@
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
     <None Include="Assets\RealisticCarControllerV3\LICENSE - Read Me!.txt" />
+    <None Include="Assets\StreamingAssets\TNUserContent.txt" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-messaging-unity\maven-metadata.xml" />
     <None Include="Assets\AfricanAnimalPack-2\Buffalo\Model\Buffalo.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\ColorCorrection3DLut.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
@@ -548,6 +626,7 @@
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\African Animal Pack 1\Lion\Model\LionSV.txt" />
     <None Include="Assets\AfricanAnimalPack-2\cheetah\Model\cheetah.txt" />
+    <None Include="Assets\Consoliads\Events.txt" />
     <None Include="Assets\AfricanAnimalPack-2\Gazelle\Model\GazelleLP.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\SimpleClear.shader" />
     <None Include="Assets\African Animal Pack 1\Zebra\Model\Zebra.txt" />
@@ -559,14 +638,26 @@
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Editor">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -574,17 +665,35 @@
     <Reference Include="Unity.Timeline">
       <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    <Reference Include="com.unity.multiplayer-weaver.Editor">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -771,6 +880,78 @@
     </Reference>
     <Reference Include="DOTween50">
       <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/SWS/Extensions/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityPurchasing/Bin/Security/live/Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Stores">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityPurchasing/Bin/Stores.dll</HintPath>
+    </Reference>
+    <Reference Include="ChannelPurchase">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityChannel/ChannelPurchase.dll</HintPath>
+    </Reference>
+    <Reference Include="Editor">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityPurchasing/Bin/Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Purchasing.Common">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityPurchasing/Bin/Purchasing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="winrt">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Platform">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Messaging">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Firebase/Plugins/Firebase.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="FacebookStore">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityPurchasing/Bin/Facebook/FacebookStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.MiniJson">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Apple">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityPurchasing/Bin/Apple/Apple.dll</HintPath>
+    </Reference>
+    <Reference Include="ConsoliDLL">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/ConsoliDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="UDP">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UDP/UDP.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityStore">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityChannel/UnityStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.TaskExtension">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Tizen">
+      <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Assets/Plugins/UnityPurchasing/Bin/Tizen/Tizen.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

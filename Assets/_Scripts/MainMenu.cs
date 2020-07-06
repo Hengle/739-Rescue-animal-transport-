@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour {
     // Use this for initialization
     public void Awake()
     {
+       
         //if(PlayerPrefManager.Instance.IsAdsRemoved())
         //PurchaseAdd.SetActive(false);
     }
