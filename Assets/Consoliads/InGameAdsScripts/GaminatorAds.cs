@@ -17,7 +17,6 @@ public class GaminatorAds : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        GameAnalytics.Initialize();
         if (_instance == null)
         {
             _instance = this;
@@ -26,6 +25,7 @@ public class GaminatorAds : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        GameAnalytics.Initialize();
     }
 
     public static GaminatorAds Instance
