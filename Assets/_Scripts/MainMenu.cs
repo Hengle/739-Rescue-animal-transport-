@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour {
     }
     public void RemoveAdd()
     {
-      //  InApp_Manager.instance.Buy_UnlockAll_Removeads();
+        InApp_Manager.instance.Buy_UnlockAll_Removeads();
     }
     void Start () {
         Time.timeScale = 1f;
@@ -49,25 +49,25 @@ public class MainMenu : MonoBehaviour {
 	{
 
 	  CustomAnalytics.logLevelStarted ("MainMenu","RateUS");
-   //     GaminatorAds.Instance.RateUs();
-	//    AGameUtils.rateUsLink ();
+      GaminatorAds.Instance.RateUs();
+	
 	}
 
 	public void _moregame()
 	{
-		  CustomAnalytics.logLevelStarted ("MainMenu","More");
-     //   GaminatorAds.Instance.MoreApps();
-        //AGameUtils.moreAppsLink ();
+	 CustomAnalytics.logLevelStarted ("MainMenu","More");
+        GaminatorAds.Instance.MoreApps();
+       
     }
 
 	public void Unlockalllevels()
 	{
-   //     InApp_Manager.instance.Buy_UnlockAll_Levels();
+        InApp_Manager.instance.Buy_UnlockAll_Levels();
 	}
     public void Unlockall()
     {
-    //    InApp_Manager.instance.Buy_UnlockAll();
+        InApp_Manager.instance.Buy_UnlockAll();
     }
-    // Update is called once per frame
+   
 
 }

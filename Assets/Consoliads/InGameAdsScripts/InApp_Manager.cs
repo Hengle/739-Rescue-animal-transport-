@@ -47,16 +47,27 @@ public class InApp_Manager : MonoBehaviour, IStoreListener
 		}
 	}
 
-	public void Buy_RemoveAds(){
+	public void Buy_UnlockAll_Removeads(){
 		Buy_Product (0);
 	}
 
-	public void Buy_UnlockAll_Levels(){
+	public void Buy_UnlockAll_Players(){
 		Buy_Product (1);
 
 	}
 
-	public void InitializePurchasing() 
+    public void Buy_UnlockAll_Levels()
+    {
+        Buy_Product(2);
+
+    }
+    public void Buy_UnlockAll()
+    {
+        Buy_Product(3);
+
+    }
+
+    public void InitializePurchasing() 
 	{
 		if (IsInitialized())
 		{
@@ -104,7 +115,6 @@ public class InApp_Manager : MonoBehaviour, IStoreListener
 		}
 
 	}
-
 //	public void Buy_unlockcars(){
 //		if (IsInitialized()) {
 //			if (!CheckProductID_Status (UnlockCars)) {
@@ -230,19 +240,113 @@ public class InApp_Manager : MonoBehaviour, IStoreListener
 		if (String.Equals(args.purchasedProduct.definition.id, No_AdsInGame, StringComparison.Ordinal))
 		{
 			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+
+			//AdsMainManagerController.instance.hide_Banner ();
+			//.Ads_purchase=true;
+
 		}
 		else	if (String.Equals(args.purchasedProduct.definition.id, InApp_Manager.instance.iapitems [0].iapItem_Name, StringComparison.Ordinal))//levels
 		{
 			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
-
             PlayerPrefManager.Instance.RemoveAds();
+            if(GameObject.FindObjectOfType<MainMenu>())
+            {
+                GameObject.FindObjectOfType<MainMenu>().PurchaseAdd.SetActive(false);
+            }
+            
+
 
         }
         else if (String.Equals(args.purchasedProduct.definition.id, InApp_Manager.instance.iapitems[1].iapItem_Name, StringComparison.Ordinal))//cars
         {
             Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
-            PlayerPrefManager.Instance.UnlockAllLevels();
+
+           
+
         }
+
+        else if (String.Equals(args.purchasedProduct.definition.id, InApp_Manager.instance.iapitems[2].iapItem_Name, StringComparison.Ordinal))//cars
+        {
+            Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+            PlayerPrefs.SetInt("DogUnlockLevels", 5);
+            PlayerPrefs.SetInt("CUnlockLevels", 5);
+            PlayerPrefs.SetInt("SUnlockLevels", 5);
+            PlayerPrefs.SetInt("LUnlockLevels", 5);
+            PlayerPrefs.SetInt("HUnlockLevels", 5);
+            PlayerPrefs.SetInt("DUnlockLevels", 5);
+
+
+        }
+        else if (String.Equals(args.purchasedProduct.definition.id, InApp_Manager.instance.iapitems[3].iapItem_Name, StringComparison.Ordinal))//cars
+        {
+            Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+
+            PlayerPrefManager.Instance.RemoveAds();
+            if (GameObject.FindObjectOfType<MainMenu>())
+            {
+                GameObject.FindObjectOfType<MainMenu>().PurchaseAdd.SetActive(false);
+            }
+            PlayerPrefs.SetInt("DogUnlockLevels", 5);
+            PlayerPrefs.SetInt("CUnlockLevels", 5);
+            PlayerPrefs.SetInt("SUnlockLevels", 5);
+            PlayerPrefs.SetInt("LUnlockLevels", 5);
+            PlayerPrefs.SetInt("HUnlockLevels", 5);
+            PlayerPrefs.SetInt("DUnlockLevels", 5);
+        }
+
+        //		if (String.Equals(args.purchasedProduct.definition.id, UnlockAll, StringComparison.Ordinal))
+        //		{
+        //			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+        //
+        //
+        //			check_Unlockall=true;
+        //
+        //		}
+        //		 if (String.Equals(args.purchasedProduct.definition.id, InApp_Manager.instance.iapitems [0].iapItem_Name, StringComparison.Ordinal))//easy
+        //		{
+        //			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+        //			PlayerPrefs.SetInt ("UnlockEasy",1);
+        //			PlayerPrefs.SetInt ("Playerselect1", 10);
+        //			for (int i = 0; i < HR_MainMenuHandler.Instance.levels.Length; i++) {
+        //				HR_MainMenuHandler.Instance.levels [i].GetComponent<Button> ().interactable = true;
+        //				HR_MainMenuHandler.Instance.Locks [i].SetActive (false);
+        //			}
+        //			HR_MainMenuHandler.Instance.UnlockEasyLevels.SetActive (false);
+        //		}
+        //		else if (String.Equals(args.purchasedProduct.definition.id, InApp_Manager.instance.iapitems [1].iapItem_Name, StringComparison.Ordinal))//medium
+        //		{
+        //			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+        //			PlayerPrefs.SetInt ("UnlockMedium",1);
+        //			PlayerPrefs.SetInt ("LevelMedium", 10);
+        //			for (int i = 0; i < HR_MainMenuHandler.Instance.levelsMedium.Length; i++) {
+        //				HR_MainMenuHandler.Instance.levelsMedium [i].GetComponent<Button> ().interactable = true;
+        //				HR_MainMenuHandler.Instance.LocksMedium [i].SetActive (false);
+        //			}
+        //			HR_MainMenuHandler.Instance.UnlockMediumLevels.SetActive (false);
+        //
+        //		}
+        //		else if (String.Equals(args.purchasedProduct.definition.id, InApp_Manager.instance.iapitems [2].iapItem_Name, StringComparison.Ordinal))//cars
+        //		{
+        //			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+        //			PlayerPrefs.SetInt ("UnlockCars",1);
+        //			for (int i = 0; i < HR_MainMenuHandler.Instance.createdCars.Length; i++) {
+        //				PlayerPrefs.SetInt (HR_MainMenuHandler.Instance.createdCars [i].name + "Owned", 1);
+        //			}
+        //			HR_MainMenuHandler.Instance.buyCarButton.GetComponentInChildren<Text>().text = "";
+        //			HR_MainMenuHandler.Instance.buyCarButton.SetActive(false);
+        //			HR_MainMenuHandler.Instance.selectCarButton.SetActive(true);
+        //			HR_MainMenuHandler.Instance.modCarPanel.SetActive(true);
+        //			HR_MainMenuHandler.Instance.UnlockCars.SetActive (false);
+        //
+        //		}
+        //		else if (String.Equals(args.purchasedProduct.definition.id, InApp_Manager.instance.iapitems [1].iapItem_Name, StringComparison.Ordinal))
+        //		{
+        //			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+        ////			check_Unlockall=true;
+        ////			AdsMainManagerController.instance.update_coinevent();
+        //		}
+
+        // Or ... an unknown product has been purchased by this user. Fill in additional products here....
         else 
 		{
 			Debug.Log(string.Format("ProcessPurchase: FAIL. Unrecognized product: '{0}'", args.purchasedProduct.definition.id));

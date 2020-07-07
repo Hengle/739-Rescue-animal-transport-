@@ -55,7 +55,7 @@ public class TimeCounter : MonoBehaviour {
 				Time.timeScale = 0;
 				if(stop==false){
                     //AdLoadWarning.Instance.CallAdWarning(AdsMainManagerController.AdType.GP);
-  //                 //CustomAnalytics.logLevelFailed ("Fail","Timeup");
+  //                CustomAnalytics.logLevelFailed ("Fail","Timeup");
                     stop = true;
 			}
 			}else {

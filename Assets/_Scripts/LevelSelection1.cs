@@ -41,7 +41,7 @@ public class LevelSelection1 : MonoBehaviour
 
     public void unlock_All()
     {
-//    InApp_Manager.instance.Buy_UnlockAll_Levels();
+       InApp_Manager.instance.Buy_UnlockAll_Levels();
        // PlayerPrefs.SetInt("LUnlockLevels", 5);
     }
 
