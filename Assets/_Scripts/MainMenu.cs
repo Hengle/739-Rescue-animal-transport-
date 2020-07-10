@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 	public GameObject _exitpannel;
     public GameObject PurchaseAdd;
@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour {
 	public void _play()
 	{
 		  CustomAnalytics.logLevelStarted ("OnPlay","MainMenu");
-		Application.LoadLevel ("LevelSelection");
+		SceneManager.LoadScene("LevelSelection");
 
 	}
 	public void yes()

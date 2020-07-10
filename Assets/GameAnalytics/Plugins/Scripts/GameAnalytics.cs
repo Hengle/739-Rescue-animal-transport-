@@ -81,7 +81,7 @@ namespace GameAnalyticsSDK
             if(_instance != null)
             {
                 // only one system tracker allowed per scene
-                Debug.LogWarning("Destroying duplicate GameAnalytics object - only one is allowed per scene!");
+             //   Debug.LogWarning("Destroying duplicate GameAnalytics object - only one is allowed per scene!");
                 Destroy(gameObject);
                 return;
             }
@@ -255,7 +255,7 @@ namespace GameAnalyticsSDK
             else
             {
                 GameAnalytics._hasInitializeBeenCalled = true;
-                Debug.LogWarning("GameAnalytics: Unsupported platform (events will not be sent in editor; or missing platform in settings): " + Application.platform);
+                //Debug.LogWarning("GameAnalytics: Unsupported platform (events will not be sent in editor; or missing platform in settings): " + Application.platform);
             }
         }
 
@@ -379,6 +379,7 @@ namespace GameAnalyticsSDK
                 return;
             }
             GA_Progression.NewEvent(progressionStatus, progression01, null);
+            //print("GALOGS");
         }
 
         /// <summary>

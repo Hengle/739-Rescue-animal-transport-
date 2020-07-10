@@ -1,0 +1,243 @@
+{
+  "project_info": {
+    "project_number": "696434869612",
+    "firebase_url": "https://game-finale.firebaseio.com",
+    "project_id": "game-finale",
+    "storage_bucket": "game-finale.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:ee173c2ca44e6316119f49",
+        "android_client_info": {
+          "package_name": "com.animal.attack.simulator2019.wild.hunting.games"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:e825e52799dab572119f49",
+        "android_client_info": {
+          "package_name": "com.army.criminals.prisoners.transport.truck.simulator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:14d9d8efd3ec11c4119f49",
+        "android_client_info": {
+          "package_name": "com.real.impossible.bike.stunts2019.mega.ramp.games"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:6d58296c27bcdbe4119f49",
+        "android_client_info": {
+          "package_name": "com.real.police.cop.car.transporter.truck.cargo.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:fd2e1406c43a75ec119f49",
+        "android_client_info": {
+          "package_name": "com.rescue.animal.transporter.truck.driving.simulator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:1dc8d6c4be456bba119f49",
+        "android_client_info": {
+          "package_name": "com.urban.bus.driving.bus.simulator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:2424c7365123e020119f49",
+        "android_client_info": {
+          "package_name": "com.us.army.humvee.jeep.car.transporter.parking.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:00ca1f314d775a5c119f49",
+        "android_client_info": {
+          "package_name": "com.us.police.limo.transporter.truck2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
