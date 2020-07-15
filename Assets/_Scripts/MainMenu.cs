@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 	public GameObject _exitpannel;
     public GameObject PurchaseAdd;
+    public GameObject Loading;
+    [HideInInspector] public AsyncOperation async = null;
     // Use this for initialization
     public void Awake()
     {
@@ -23,8 +25,9 @@ public class MainMenu : MonoBehaviour {
 	public void _play()
 	{
 		  CustomAnalytics.logLevelStarted ("OnPlay","MainMenu");
-		SceneManager.LoadScene("LevelSelection");
-
+        //SceneManager.LoadScene("LevelSelection");
+        Loading.SetActive(true);
+        StartCoroutine("CR_LoadScene",2);
 	}
 	public void yes()
 	{
@@ -68,6 +71,11 @@ public class MainMenu : MonoBehaviour {
     {
         InApp_Manager.instance.Buy_UnlockAll();
     }
-   
+    private IEnumerator CR_LoadScene(int _sceneIndex)
+    {
+        yield return new WaitForSeconds(3f);
+        async = SceneManager.LoadSceneAsync(_sceneIndex);
+        yield return async;
+    }
 
 }

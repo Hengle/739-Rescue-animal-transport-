@@ -249,13 +249,15 @@ namespace GameAnalyticsSDK
 
             if(platformIndex >= 0)
             {
+              
                 GA_Wrapper.Initialize (SettingsGA.GetGameKey (platformIndex), SettingsGA.GetSecretKey (platformIndex));
                 GameAnalytics._hasInitializeBeenCalled = true;
             }
             else
             {
+               
                 GameAnalytics._hasInitializeBeenCalled = true;
-                //Debug.LogWarning("GameAnalytics: Unsupported platform (events will not be sent in editor; or missing platform in settings): " + Application.platform);
+                Debug.LogWarning("GameAnalytics: Unsupported platform (events will not be sent in editor; or missing platform in settings): " + Application.platform);
             }
         }
 

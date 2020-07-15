@@ -526,6 +526,7 @@
     <Compile Include="Assets\Unity.IO.Compression\OutputBuffer.cs" />
     <Compile Include="Assets\Unity.IO.Compression\OutputWindow.cs" />
     <Compile Include="Assets\Unity.IO.Compression\SR.cs" />
+    <None Include="Assets\StreamingAssets\TNLoadText.txt" />
     <None Include="Assets\African Animal Pack 1\Zebra\Model\ZebraLP.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
     <None Include="Assets\RealisticCarControllerV3\Scripts\Skidmarks.shader" />
@@ -598,6 +599,7 @@
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\CameraMotionBlurDX11.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+    <None Include="Assets\StreamingAssets\TNUserContent.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\BlurEffectConeTaps.shader" />

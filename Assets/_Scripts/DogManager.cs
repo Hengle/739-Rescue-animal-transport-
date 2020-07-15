@@ -17,7 +17,7 @@ public class DogManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-       // PlayerPrefs.SetInt("DogLevel",2);
+        //PlayerPrefs.SetInt("DogLevel",3);
         int currentlevel = PlayerPrefs.GetInt ("DogLevel");
 		print("level :"+currentlevel);
 		_levels.gameObject.transform.GetChild (currentlevel - 1).gameObject.SetActive (true);

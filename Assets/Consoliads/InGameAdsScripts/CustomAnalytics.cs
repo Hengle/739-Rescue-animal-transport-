@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-using System.Globalization;
 using GameAnalyticsSDK;
+using System;
+using UnityEngine;
 
 public class CustomAnalytics
 {
@@ -31,14 +28,14 @@ public class CustomAnalytics
 
 		try
 		{
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "level" + level + "_" + levelNo);
 				//Firebase.Analytics.FirebaseAnalytics.LogEvent("level_started_" + level + "_" + levelNo);
-				Debug.Log("Analytics: level_started" + level + "_" + levelNo);
-                Debug.Log("Analytics: logLevelStarted:" + level + ":" + levelNo);
+			    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "level" + level + "_" + levelNo);
+				Debug.Log("GameAnalytics: level_started" + level + "_" + levelNo);
+                Debug.Log("GameAnalytics: logLevelStarted:" + level + ":" + levelNo);
 		}
 		catch (Exception e)
 		{
-			Debug.Log("Analytics: Error in Analytics: " + e.ToString());
+			Debug.Log("GameAnalytics: Error in Analytics: " + e.ToString());
 
 		}
 
@@ -51,14 +48,15 @@ public class CustomAnalytics
 
         try
         {
-            //  Firebase.Analytics.FirebaseAnalytics.LogEvent("Open_" + level);
-                GameAnalytics.NewDesignEvent("Open_" + level);
-                Debug.Log("Analytics: Open_" + level );
-             // Debug.Log("Analytics: Open_Notification_:" + level);
+            //Firebase.Analytics.FirebaseAnalytics.LogEvent("Open_" + level);
+			GameAnalytics.NewDesignEvent("Open_" + level);
+
+			Debug.Log("GameAnalytics: Open_" + level );
+           // Debug.Log("Analytics: Open_Notification_:" + level);
         }
         catch (Exception e)
         {
-            Debug.Log("Analytics: Error in Analytics: " + e.ToString());
+            Debug.Log("GameAnalytics: Error in Analytics: " + e.ToString());
 
         }
 
@@ -70,14 +68,17 @@ public class CustomAnalytics
 
 		try
 		{
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "level" + level + "_" + levelNo);
-            //	Firebase.Analytics.FirebaseAnalytics.LogEvent("level_started_" + level + "_" + levelNo);
-            Debug.Log("Analytics: level_started" + level + "_" + levelNo);
+
+
+			//Firebase.Analytics.FirebaseAnalytics.LogEvent("level_started_" + level + "_" + levelNo);
+			GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "level" + level + "_" + levelNo);
+
+			Debug.Log("GameAnalytics: level_started" + level + "_" + levelNo);
 
 		}
 		catch (Exception e)
 		{
-			Debug.Log("Analytics: Error in Analytics: " + e.ToString());
+			Debug.Log("GameAnalytics: Error in Analytics: " + e.ToString());
 
 		}
 	}
@@ -87,13 +88,14 @@ public class CustomAnalytics
 		level = level.Replace(" ", "_");
 		try
 		{
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "level" + level + "_" + levelNo);
-            //	Firebase.Analytics.FirebaseAnalytics.LogEvent("level_failed_" + level + "_" + levelNo);
-            Debug.Log("Analytics: level_failed_" + level + "_" + levelNo);
+			//Firebase.Analytics.FirebaseAnalytics.LogEvent("level_failed_" + level + "_" + levelNo);
+			GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "level" + level + "_" + levelNo);
+
+			Debug.Log("GameAnalytics: level_failed_" + level + "_" + levelNo);
 		}
 		catch (Exception e)
 		{
-			Debug.Log("Analytics: Error in Analytics: " + e.ToString());
+			Debug.Log("GameAnalytics: Error in Analytics: " + e.ToString());
 
 		}
 
@@ -104,14 +106,16 @@ public class CustomAnalytics
 		level = level.Replace(" ", "_");
 		try
 		{
-            //	Firebase.Analytics.FirebaseAnalytics.LogEvent("level_failed_" + level + "_" + levelNo);
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "level" + level + "_" + levelNo);
-            Debug.Log("Analytics: level_failed_" + level + "_" + levelNo);
-			Debug.Log("Analytics: logLevelFailed:" + world + ":" + level + ":" + levelNo);
+			//Firebase.Analytics.FirebaseAnalytics.LogEvent("level_failed_" + level + "_" + levelNo);
+			GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "level" + level + "_" + levelNo);
+
+			Debug.Log("GameAnalytics: level_failed_" + level + "_" + levelNo);
+
+			Debug.Log("GameAnalytics: logLevelFailed:" + world + ":" + level + ":" + levelNo);
 		}
 		catch (Exception e)
 		{
-			Debug.Log("Analytics: Error in Analytics: " + e.ToString());
+			Debug.Log("GameAnalytics: Error in Analytics: " + e.ToString());
 
 		}
 	}
@@ -121,14 +125,15 @@ public class CustomAnalytics
 		level = level.Replace(" ", "_");
 		try
 		{
-            //	Firebase.Analytics.FirebaseAnalytics.LogEvent("level_completed_" + level + "_" + levelNo);
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "level" + level + "_" + levelNo);
-            Debug.Log("Analytics: level_completed_" + level + "_" + levelNo);
+			//Firebase.Analytics.FirebaseAnalytics.LogEvent("level_completed_" + level + "_" + levelNo);
+			GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "level" + level + "_" + levelNo);
+
+			Debug.Log("GameAnalytics: level_completed_" + level + "_" + levelNo);
 
 		}
 		catch (Exception e)
 		{
-			Debug.Log("Analytics: Error in Analytics: " + e.ToString());
+			Debug.Log("GameAnalytics: Error in Analytics: " + e.ToString());
 
 		}
 	}
@@ -138,13 +143,14 @@ public class CustomAnalytics
 		level = level.Replace(" ", "_");
 		try
 		{
-            //	Firebase.Analytics.FirebaseAnalytics.LogEvent("level_completed_" + level + "_" + levelNo);
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "level" + level + "_" + levelNo);
-            Debug.Log("Analytics: level_completed_" + level + "_" + levelNo);
+			//Firebase.Analytics.FirebaseAnalytics.LogEvent("level_completed_" + level + "_" + levelNo);
+			GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "level" + level + "_" + levelNo);
+
+			Debug.Log("GameAnalytics: level_completed_" + level + "_" + levelNo);
 		}
 		catch (Exception e)
 		{
-			Debug.Log("Analytics: Error in Analytics: " + e.ToString());
+			Debug.Log("GameAnalytics: Error in Analytics: " + e.ToString());
 
 		}
 	}
@@ -154,14 +160,16 @@ public class CustomAnalytics
 		eventName = eventName.Replace(" ", "_");
 		try
 		{
-            //Firebase.Analytics.FirebaseAnalytics.LogEvent(eventName);
-            GameAnalytics.NewDesignEvent(eventName);
-            Debug.Log("Analytics: " + eventName);
+			//Firebase.Analytics.FirebaseAnalytics.LogEvent(eventName);
+			GameAnalytics.NewDesignEvent(eventName);
+
+
+			Debug.Log("GameAnalytics: " + eventName);
 
 		}
 		catch (Exception e)
 		{
-			Debug.Log("Analytics: Error in Analytics: " + e.ToString());
+			Debug.Log("GameAnalytics: Error in Analytics: " + e.ToString());
 
 		}
 

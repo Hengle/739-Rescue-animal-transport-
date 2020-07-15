@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ModeSelection : MonoBehaviour {
-	
+    public static ModeSelection Instance;
+    public GameObject EnvSelection;
+    public GameObject[] ModesLevel;
+    private GameObject CurrentModeLevel;
+    public GameObject Loading;
 	// Use this for initialization
 	void Start () {
 		
@@ -87,5 +91,25 @@ public class ModeSelection : MonoBehaviour {
 		 CustomAnalytics.logLevelStarted ("levelBackBtn","ModSelection");
 		Application.LoadLevel ("MainMenu");
 	}
-
+    public void EnvSelectMode(GameObject currentmode)
+    {
+        CurrentModeLevel = currentmode;
+        StartCoroutine("CR_LoadScene",EnvSelection);
+    }
+    private IEnumerator CR_LoadScene(GameObject envmod)
+    {
+        yield return new WaitForSeconds(3f);
+        envmod.SetActive(true);
+        Loading.SetActive(false);
+    }
+    public void SelectModeLevel()
+    {
+        foreach (GameObject j in ModesLevel)
+            j.SetActive(false);
+        StartCoroutine("CR_LoadScene", CurrentModeLevel);
+    }
+    public void Back_From_Mode(GameObject obj)
+    {
+        StartCoroutine("CR_LoadScene",obj);
+    }
 }
