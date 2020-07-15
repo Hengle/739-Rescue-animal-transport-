@@ -48,8 +48,6 @@ public class ModeSelection : MonoBehaviour {
 		PlayerPrefs.SetInt ("MDeer",0);
 		PlayerPrefs.SetInt ("MDog",0);
 	}
-
-
 	public void _cowmood()
 	{
 	  CustomAnalytics.logLevelStarted ("ModSelection","cowmood");
