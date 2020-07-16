@@ -89,6 +89,11 @@ public class ModeSelection : MonoBehaviour {
 		 CustomAnalytics.logLevelStarted ("levelBackBtn","ModSelection");
 		Application.LoadLevel ("MainMenu");
 	}
+    public void SelectMode(GameObject currentmode)
+    {
+        CurrentModeLevel = currentmode;
+        StartCoroutine("CR_LoadScene", CurrentModeLevel);
+    }
     public void EnvSelectMode(GameObject currentmode)
     {
         CurrentModeLevel = currentmode;
