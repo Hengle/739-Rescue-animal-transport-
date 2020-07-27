@@ -594,6 +594,7 @@
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\GlobalFog.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
+    <None Include="Assets\_Scenes\German Shepherd\German Shepherd\Model\GermanShepherdLP.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\ColorCorrectionSelective.shader" />
     <None Include="Assets\African Animal Pack 1\Crocodile\Crocodile_01\Model\CrocodileLP_01.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
@@ -651,6 +652,7 @@
     <None Include="Assets\African Animal Pack 1\Lioness\Model\lioness.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\_Scenes\German Shepherd\German Shepherd\Model\GermanShepherd.txt" />
     <None Include="Assets\RealisticCarControllerV3\Standard Assets\Effects\ImageEffects\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Rana Uzair Thakur WorkPlace/GitHubProject/Empty/739-Rescue-animal-transport-/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
