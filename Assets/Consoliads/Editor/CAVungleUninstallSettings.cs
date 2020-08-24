@@ -26,7 +26,6 @@ public class CAVungleUninstallSettings : Editor
         private readonly string[] kPluginFiles = {
 			kIOSPluginsPath       +   "/libvungle-mediation.a",
 			kAndroidPluginsPath   +   "/vungle-mediation.aar",
-			kAndroidPluginsPath   +   "/vungle-android-sdk-6.7.0.aar",
 
             kAssets               +   "/Consoliads/Editor/CAVungleUninstallSettings.cs"
 		};

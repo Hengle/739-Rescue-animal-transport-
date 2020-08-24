@@ -181,7 +181,7 @@ public class AdsConsentFirstController : MonoBehaviour {
         consenttad_tickpanel.SetActive(false);
         try
         {
-            //GaminatorAds.Instance.ShowSmartBanner(0);
+            GaminatorAds.Instance.ShowSmartBanner(0);
 
         }
         catch

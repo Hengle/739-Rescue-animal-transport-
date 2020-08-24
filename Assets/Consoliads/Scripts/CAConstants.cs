@@ -5,8 +5,8 @@ public static class CAConstants
 {
 	public const string REQUEST_LOADED = "loaded";
 	public const string REQUEST_FAILED = "failed";
-	public const string ConsoliAdsVersion = "7.2.2";
-	public const string sdkVersionID = "2216";
+	public const string ConsoliAdsVersion = "5.1.3";
+	public const string sdkVersionID = "2151";
 	public static string networkErrorMsg = "Sorry! There was a Network Error";
 	public const float LOAD_THRESHOLD = 5.0f;
 
@@ -52,7 +52,6 @@ public static class CAConstants
 	public const string TITLE_KEY = "title";
 	public const string IS_HIDEAD_KEY = "isHideAds";
 
-	public const string UNITY_EDITOR_VERSION_KEY = "unityEditorVersion";
 	public const string SDK_VERSION_KEY = "gssdkVersion";
 	public const string SDK_VERSION_ID_KEY = "sdkVersionID";
 	public const string SDK_VERSION = "sdkVersion";
@@ -97,38 +96,11 @@ public static class LogMessages
 	public const string STOPWATCH_START = "***** STOPWATCH START *****";
 }
 
-public class AdPosition
-{
-	public double x { get; set; }
-	public double y { get; set; }
-
-	public AdPosition(double v1, double v2)
-	{
-		this.x = v1;
-		this.y = v2;
-	}
-
-}
-
 public class AdSize
 {
 	public int width { get; set; }
 	public int height { get; set; }
-
-	public AdSize(int v1, int v2)
-	{
-		this.width = v1;
-		this.height = v2;
-	}
 }
-
-public enum BannerType
-{
-	PORTAL = 0,
-	CUSTOM_SIZE = 1,
-	CUSTOM_POSITION = 2,
-	CUSTOM_SIZE_POSITION = 3
-};
 
 public enum PlaceholderName
 {
@@ -154,21 +126,32 @@ public enum AdNetworkName
 {
     EMPTY = -1,
     ADMOBINTERSTITIAL = 0,
+    LEADBOLTINTERSTITIAL = 2,
+    LEADBOLTREWARDEDVIDEO = 4,
     CHARTBOOST = 5,
+    CHARTBOOSTMOREAPPS = 6,
+    HEYZAPINTERSTITIAL = 7,
+    REVMOBFULLSCREEN = 8,
     ADCOLONY = 9,
+    REVMOBVIDEO = 11,
     CONSOLIADS = 19,
     UNITYADS = 10,
     IRONSOURCEINTERSTITIAL = 12,
+    IRONSOURCEOFFERWALL = 14,
     IRONSOURCEREWARDEDVIDEO = 15,
     APPLOVININTERSTITIAL = 18,
     APPLOVINREWARDEDVIDEO = 20,
     ADMOBREWARDEDVIDEO = 21,
+    HEYZAPVIDEO = 22,
+    REVMOBREWARDEDVIDEO = 24,
     CHARTBOOSTREWARDEDVIDEO = 25,
     UNITYADSREWARDEDVIDEO = 26,
     ADMOBNATIVEAD = 27,
     ADMOBBANNER = 28,
 	VUNGLEADS = 29,
 	TAPJOYADS = 30,
+	MOBVISTAINTERSTITIAL = 31,
+	MOBVISTAREWARDEDVIDEO = 32,
 	FACEBOOKINTERSTITIAL = 33,
 	FACEBOOKREWARDEDVIDEO = 34,
     CONSOLIADSREWARDEDVIDEO = 35,
@@ -186,6 +169,11 @@ public enum AdNetworkName
 	INMOBIREWARDEDVIDEO = 48,
 	INMOBIBANNERAD = 49,
 	MOBFOXINTERSTITIAL = 50,
+	MOBFOXREWARDEDVIDEO = 51,
+	MYTARGETINTERSTITIAL = 52,
+	MYTARGETBANNERAD = 53,
+	OGURYINTERSTITIAL = 54,
+	OGURYREWARDEDVIDEO = 55,
 	MOBFOXBANNER = 56,
 	CONSOLIADSBANNER = 57,
 	CONSOLIADSNATIVE = 58,
@@ -193,52 +181,61 @@ public enum AdNetworkName
     UNITYADSBANNER = 68,
     APPLOVINNATIVE = 69,
     IRONSOURCEBANNER = 70,
+    HEYZAPREWARDEDVIDEO = 71,
+    HEYZAPBANNER = 72,
     KIDOZBANNER = 73,
     STARTAPPBANNER = 76,
     MOPUBBANNER = 77,
+    MYTARGETREWARDED = 81,
     TAPJOYREWARDED = 83,
     VUNGLEREWARDED = 84,
 	MINTEGRALINTERSTITIAL = 60,
 	MINTEGRALREWARDEDVIDEO = 61,
 	MINTEGRALVIDEO = 62,
-	STARTAPPNATIVE = 75,
-	MOPUBNATIVE = 78,
-	MINTEGRALNATIVE = 63,
-	//VUNGLEBANNER = 86,
-	ADCOLONYBANNER = 87,
-	MINTEGRALBANNER = 88
-
 };
 public enum AdNetworkNameInterstitial
 {
     EMPTY = -1,
-	ADCOLONY = 9,
-	ADMOBINTERSTITIAL = 0,
-	APPLOVININTERSTITIAL = 18,
-	CHARTBOOST = 5,
-	CONSOLIADS = 19,
+    ADMOBINTERSTITIAL = 0,
+    LEADBOLTINTERSTITIAL = 2,
+    CHARTBOOST = 5,
+    CHARTBOOSTMOREAPPS = 6,
+    HEYZAPINTERSTITIAL = 7,
+    REVMOBFULLSCREEN = 8,
+    ADCOLONY = 9,
+    REVMOBVIDEO = 11,
+    CONSOLIADS = 19,
+    UNITYADS = 10,
+    IRONSOURCEINTERSTITIAL = 12,
+    IRONSOURCEOFFERWALL = 14,
+    APPLOVININTERSTITIAL = 18,
+    HEYZAPVIDEO = 22,
+	VUNGLEADS = 29,
+	TAPJOYADS = 30,
+	MOBVISTAINTERSTITIAL = 31,
 	FACEBOOKINTERSTITIAL = 33,
-	INMOBIINTERSTITIAL = 47,
-	IRONSOURCEINTERSTITIAL = 12,
+	STARTAPPINTERSTITIAL = 36,
 	KIDOZINTERSTITIAL = 38,
+	MOPUBINTERSTITIAL = 40,
+	INMOBIINTERSTITIAL = 47,
+	MOBFOXINTERSTITIAL = 50,
+	MYTARGETINTERSTITIAL = 52,
+	OGURYINTERSTITIAL = 54,
 	MINTEGRALINTERSTITIAL = 60,
 	MINTEGRALVIDEO = 62,
-	MOBFOXINTERSTITIAL = 50,
-	MOPUBINTERSTITIAL = 40,
-	MYTARGETINTERSTITIAL = 52,
-	STARTAPPINTERSTITIAL = 36,
-	TAPJOYADS = 30,
-	UNITYADS = 10,
-	VUNGLEADS = 29
+	//ATMOSPLAYINTERSTITIAL = 65
 };
 public enum AdNetworkNameRewardedVideo
 {
     EMPTY = -1,
+    LEADBOLTREWARDEDVIDEO = 4,
     IRONSOURCEREWARDEDVIDEO = 15,
     APPLOVINREWARDEDVIDEO = 20,
     ADMOBREWARDEDVIDEO = 21,
+    REVMOBREWARDEDVIDEO = 24,
     CHARTBOOSTREWARDEDVIDEO = 25,
     UNITYADSREWARDEDVIDEO = 26,
+	MOBVISTAREWARDEDVIDEO = 32,
 	FACEBOOKREWARDEDVIDEO = 34,
     CONSOLIADSREWARDEDVIDEO = 35,
 	STARTAPPREWARDEDVIDEO = 37,
@@ -247,9 +244,13 @@ public enum AdNetworkNameRewardedVideo
 	ADCOLONYREWARDEDVIDEO = 46,
 	INMOBIREWARDEDVIDEO = 48,
 	MOBFOXREWARDEDVIDEO = 51,
+	OGURYREWARDEDVIDEO = 55,
+    HEYZAPREWARDEDVIDEO = 71,
+    MYTARGETREWARDED = 81,
     TAPJOYREWARDED = 83,
     VUNGLEREWARDED = 84,
-	MINTEGRALREWARDEDVIDEO = 61
+	MINTEGRALREWARDEDVIDEO = 61,
+	//ATMOSPLAYREWARDEDVIDEO = 66
 };
 
 /*
@@ -266,10 +267,7 @@ public enum AdNetworkNameNative
     ADMOBNATIVEAD = 27,
 	FACEBOOKNATIVE = 44,
 	CONSOLIADSNATIVE = 58,
-    APPLOVINNATIVE = 69,
-	STARTAPPNATIVE = 75,
-	MOPUBNATIVE = 78,
-	MINTEGRALNATIVE = 63
+    APPLOVINNATIVE = 69
 }
 
 public enum AdNetworkNameBanner
@@ -279,16 +277,15 @@ public enum AdNetworkNameBanner
 	APPLOVINBANNER = 42,
 	FACEBOOKBANNER = 43,
 	INMOBIBANNERAD = 49,
+	MYTARGETBANNERAD = 53,
 	MOBFOXBANNER = 56,
 	CONSOLIADSBANNER = 57,
     UNITYADSBANNER = 68,
     IRONSOURCEBANNER = 70,
+    HEYZAPBANNER = 72,
     KIDOZBANNER = 73,
     STARTAPPBANNER = 76,
-    MOPUBBANNER = 77,
-	//VUNGLEBANNER = 86,
-	ADCOLONYBANNER = 87,
-	MINTEGRALBANNER = 88
+    MOPUBBANNER = 77
 }
 
 public enum AdNetworkNameIcon
@@ -353,6 +350,9 @@ public enum NetworkAdIDType
 {
     AdmobBannerAdUnitID = 1,
     AdmobInterstitialAdUnitID = 2,
+    LeadboltAppKey = 3,
+    RevmobMediaID = 4,
+    HeyzapID = 5,
     ChartboostAppID = 6,
     ChartboostAppSignature = 7,
     AdColonyAppID = 8,
@@ -362,6 +362,7 @@ public enum NetworkAdIDType
     GoogleAnalyticsTrackingCode = 12,
     FlurryAnalyticsAppKey = 13,
     AppLovinID = 14,
+    OguryInterstitialAPIKey = 15,
     ConsoliadsAppKey = 16,
     AdmobRewardedVideoAdUnitID = 17,
     AdmobAppID = 18,
@@ -369,6 +370,10 @@ public enum NetworkAdIDType
 	VungleAdID = 20,
 	TapJoyAdID = 21,
 	TapJoyPlacement = 22,
+	MobVistaAppKey = 23,
+	MobVistaAPPID = 24,
+	MobVistaInterstitialID = 25,
+	MobVistaVideoID = 26,
 	FacebookBannerID = 36,
 	FacebookNativeID = 37,
 	FacebookInterstitialUnitID = 27,
@@ -387,22 +392,22 @@ public enum NetworkAdIDType
 	InmobiBannerAdPlacement = 42,
 	MobfoxInterstitialAdUnit = 43,
 	MobfoxRewardedVideoAdUnit = 44,
+	MyTargetInterstitialSlotID = 45,
+	MyTargetBannerAdSlotID = 46,
+	OguryAPIKey = 47,
+	OguryInterstitialAdUnit = 48,
+	OguryRewardedVideoAdUnit = 49,
 	MobfoxBannerAdUnit = 50,
     UnityAdsBannerPlacement = 62,
     MopubBannerAdUnit = 63,
-	MopubNativeAdUnit = 64,
+    MyTargetRewardedAdSlotID = 67,
     TapJoyRewardedPlacement = 68,
     VungleRewardedPlacementID = 69,
-	VungleBannerPlacement = 74,
 	MintegralAppKey = 51,
 	MintegralAPPID = 52,
 	MintegralInterstitialID = 53,
 	MintegralRewardedID = 54,
-	MintegralVideoID = 55,
-	MintegralNativeID = 56,
-	MintegralBannerPlacement = 76,
-	AdColonyBannerZoneID = 75
-
+	MintegralVideoID = 55
 }
 
 public enum CAAnalytics
@@ -430,13 +435,6 @@ public enum RequestState
 	Requested = 2,
 	Completed = 3,
 	Failed = 4
-}
-
-public enum IconAnimationType
-{
-	NONE = 0,
-	SHAKE = 1,
-	PULSE = 2
 }
 
 

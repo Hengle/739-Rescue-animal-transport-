@@ -7,14 +7,8 @@ public class CAInterstitialMediationDetails
 {
 	int count = 0;
 	private bool isFirst = true;
-	[HideInInspector] public bool skipFirst = false;
-
-	public const string InterstitialTypeOrder = "-1,9,0,18,5,19,33,47,12,38,60,62,50,40,52,36,30,10,29";
-	[EnumOrder(InterstitialTypeOrder)]
+	public bool skipFirst = false;
 	public AdNetworkNameInterstitial[] networkList;
-
-	public const string failOverTypeOrder = "-1,9,0,18,5,19,33,47,12,38,60,62,50,40,52,36,30,10,29";
-	[EnumOrder(failOverTypeOrder)]
 	public AdNetworkNameInterstitial failOver = AdNetworkNameInterstitial.EMPTY;
 
 

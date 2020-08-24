@@ -35,7 +35,7 @@ allprojects {
             url "https://maven.google.com"
         }
         maven {
-            url "https://maven.google.com/" // Assets/Consoliads/Editor/AdMobDependencies.xml:7, Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:7, Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:12, Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:17, Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:22, Assets/Consoliads/Editor/FacebookDependencies.xml:7
+            url "https://maven.google.com/" // Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:7, Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:12, Assets/Consoliads/Editor/FacebookDependencies.xml:7
         }
         maven {
             url (unityProjectPath + "/Assets/Firebase/m2repository") // Assets/Firebase/Editor/AnalyticsDependencies.xml:20, Assets/Firebase/Editor/AppDependencies.xml:20, Assets/Firebase/Editor/MessagingDependencies.xml:22
@@ -53,12 +53,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 implementation 'com.android.support:multidex:1.0.1'
 // Android Resolver Dependencies Start
-    implementation 'androidx.appcompat:appcompat:1.0.0' // Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:22
-    implementation 'androidx.cardview:cardview:1.0.0' // Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:12
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3' // Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:17
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3' // Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:12
     implementation 'com.android.support:support-annotations:28.0.0' // Assets/Consoliads/Editor/FacebookDependencies.xml:7
-    implementation 'com.google.android.gms:play-services-ads:19.1.0' // Assets/Consoliads/Editor/AdMobDependencies.xml:7
-    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0' // Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:7
+    implementation 'com.google.android.gms:play-services-ads:17.2.1' // Assets/Consoliads/Editor/ConsoliAdsDependencies.xml:7
     implementation 'com.google.firebase:firebase-analytics:17.1.0' // Assets/Firebase/Editor/MessagingDependencies.xml:15
     implementation 'com.google.firebase:firebase-analytics-unity:6.4.0' // Assets/Firebase/Editor/AnalyticsDependencies.xml:20
     implementation 'com.google.firebase:firebase-app-unity:6.4.0' // Assets/Firebase/Editor/AppDependencies.xml:20
@@ -69,18 +66,6 @@ implementation 'com.android.support:multidex:1.0.1'
 // Android Resolver Dependencies End
 **DEPS**}
 
-// Android Resolver Exclusions Start
-android {
-  packagingOptions {
-      exclude ('/lib/arm64-v8a/*' + '*')
-      exclude ('/lib/armeabi/*' + '*')
-      exclude ('/lib/mips/*' + '*')
-      exclude ('/lib/mips64/*' + '*')
-      exclude ('/lib/x86/*' + '*')
-      exclude ('/lib/x86_64/*' + '*')
-  }
-}
-// Android Resolver Exclusions End
 android {
     compileSdkVersion **APIVERSION**
     buildToolsVersion '**BUILDTOOLS**'

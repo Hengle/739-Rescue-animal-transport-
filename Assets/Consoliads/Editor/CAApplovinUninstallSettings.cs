@@ -43,12 +43,8 @@ public class CAApplovinUninstallSettings : Editor
 			kIOSPluginsPath       +   "/Star_Sprite_4.png",
 
 			kAndroidPluginsPath   +   "/applovin-mediation.aar",
-			kAndroidPluginsPath   +   "/applovin-sdk-9.12.6.aar",
-			kAssets               +   "/Consoliads/Editor/CAApplovinUninstallSettings.cs",
-
-            kAssets               +   "/Consoliads/Editor/CAApplovinBuildPostProcessor.cs"
-							
-
+			kAndroidPluginsPath   +   "/applovin-sdk-9.9.2.aar",
+			kAssets               +   "/Consoliads/Editor/CAApplovinUninstallSettings.cs"
 		};
 
 		private string[] kPluginFolders = {

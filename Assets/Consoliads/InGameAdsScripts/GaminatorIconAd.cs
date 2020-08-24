@@ -6,13 +6,13 @@ public class GaminatorIconAd : MonoBehaviour
 {
     [Header("GaminatorAds NativeAd SceneIndex ")]
     public int sceneIndex = 0;
-    public IconAnimationType animationType;
+
     public void OnEnable()
     {
        
         if (GaminatorAds.Instance != null)
         {
-            GaminatorAds.Instance.ShowAdIcon(this.gameObject, sceneIndex, animationType);
+            GaminatorAds.Instance.ShowAdIcon(this.gameObject, sceneIndex);
         }
 
         StartCoroutine(DelayForAdIcon());
@@ -44,7 +44,7 @@ public class GaminatorIconAd : MonoBehaviour
 
         if (GaminatorAds.Instance != null)
         {
-            GaminatorAds.Instance.ShowAdIcon(this.gameObject, sceneIndex, animationType);
+            GaminatorAds.Instance.ShowAdIcon(this.gameObject, sceneIndex);
         }
 
         StartCoroutine(DelayForAdIcon());

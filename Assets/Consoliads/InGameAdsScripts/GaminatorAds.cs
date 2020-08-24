@@ -10,13 +10,16 @@ public class GaminatorAds : MonoBehaviour
 {
 
     public static GaminatorAds _instance;
-	//public static event Action OnRewardedAdCompletedEvent;
+    public bool show_MainMenu_Ad = false;
+    public bool SelectionSceneAds = false;
+    //public static event Action OnRewardedAdCompletedEvent;
     public bool userConsent;
     //public GameObject nativePanel,adIcon;
 
     // Start is called before the first frame update
     private void Awake()
     {
+        GameAnalytics.Initialize();
         if (_instance == null)
         {
             _instance = this;
@@ -25,7 +28,6 @@ public class GaminatorAds : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        GameAnalytics.Initialize();
     }
 
     public static GaminatorAds Instance
@@ -75,7 +77,7 @@ public class GaminatorAds : MonoBehaviour
         try
         { 
             ConsoliAds.Instance.initialize(userConsent);
-            //HideBanner(consoliAdsBannerView);
+            HideBanner();
         }
         catch (Exception e)
         {
@@ -84,7 +86,7 @@ public class GaminatorAds : MonoBehaviour
         }
     }
 
-    public void ShowSmartBanner(int Scene_Index, ConsoliAdsBannerView consoliAdsBannerView)
+    public void ShowSmartBanner(int Scene_Index)
     {
         if (PlayerPrefManager.Instance.IsAdsRemoved())
             return;
@@ -92,9 +94,9 @@ public class GaminatorAds : MonoBehaviour
         try
         {
            
-            ConsoliAds.Instance.HideBanner(consoliAdsBannerView);
+            ConsoliAds.Instance.HideBanner();
             Debug.Log("ShowSmartBanner");
-            ConsoliAds.Instance.ShowBanner(Scene_Index, consoliAdsBannerView);
+            ConsoliAds.Instance.ShowBanner(Scene_Index);
         }
         catch (Exception e)
         {
@@ -103,14 +105,14 @@ public class GaminatorAds : MonoBehaviour
         }
     }
 
-    public void HideBanner(ConsoliAdsBannerView consoliAdsBannerView)
+    public void HideBanner()
     {
         if (PlayerPrefManager.Instance.IsAdsRemoved())
             return;
         try
         {
             Debug.Log("HideBanner");
-            ConsoliAds.Instance.HideBanner(consoliAdsBannerView);
+            ConsoliAds.Instance.HideBanner();
         }
         catch(Exception e){
 			Debug.LogError(e.Message);
@@ -200,7 +202,7 @@ public class GaminatorAds : MonoBehaviour
     }
 
 
-    public void ShowAdIcon(GameObject adIcon,int Scene_Index, IconAnimationType animationTyp)
+    public void ShowAdIcon(GameObject adIcon,int Scene_Index)
     {
         if (PlayerPrefManager.Instance.IsAdsRemoved())
             return;
@@ -208,7 +210,7 @@ public class GaminatorAds : MonoBehaviour
         {
            
             Debug.Log("ShowAdIcon");
-            ConsoliAds.Instance.ShowIconAd(adIcon, Scene_Index, animationTyp);
+            ConsoliAds.Instance.ShowIconAd(adIcon, Scene_Index);
         }
         catch (Exception e)
         {
@@ -233,7 +235,7 @@ public class GaminatorAds : MonoBehaviour
         }
     }
 
-    public void MoreAppsShowAdIcon(GameObject adIcon, int Scene_Index, IconAnimationType animationType)
+    public void MoreAppsShowAdIcon(GameObject adIcon, int Scene_Index)
     {
         if (PlayerPrefManager.Instance.IsAdsRemoved())
             return;
@@ -241,7 +243,7 @@ public class GaminatorAds : MonoBehaviour
         {
 
             Debug.Log("MoreAppsShowAdIcon");
-            ConsoliAds.Instance.ShowIconAd(adIcon, Scene_Index, animationType);
+            ConsoliAds.Instance.ShowIconAd(adIcon, Scene_Index);
         }
         catch (Exception e)
         {

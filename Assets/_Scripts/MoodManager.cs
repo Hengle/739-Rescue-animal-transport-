@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoodManager : MonoBehaviour {
 	public GameObject _env,_HorseMode,_LionMode,_SheepMode,_CowMode,_DeerMode,_dogMode;
-	public GameObject _pausepannel,levelcomplete,levelfaild,succes_store, Fail_store;
+	public GameObject _pausepannel,levelcomplete,levelfaild,succes_store, Fail_store,Quality_loading;
 	void Awake()
 	{
 		Time.timeScale = 1f;
@@ -75,14 +75,22 @@ public class MoodManager : MonoBehaviour {
 		
 		 CustomAnalytics.logLevelStarted ("Gameplay","_restart");
 	}
+    IEnumerator loading_delay()
+    {
+        yield return new WaitForSeconds(5);
+        Time.timeScale = 1f;
+        Application.LoadLevel("MainMenu");
+        GaminatorAds._instance.show_MainMenu_Ad = true;
+
+        CustomAnalytics.logLevelStarted("gameplay", "homebtn");
+    }
 	public void _home()
 	{
-		
-		Time.timeScale = 1f;
-		Application.LoadLevel ("MainMenu");
-		
-		CustomAnalytics.logLevelStarted ("gameplay","homebtn");
-	}
+        StartCoroutine(loading_delay());
+        Quality_loading.SetActive(true);
+        Time.timeScale = 1f;
+
+    }
 
 	public void _Next()
 	{

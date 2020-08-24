@@ -29,7 +29,6 @@ public class CAAdmobUninstallSettings : Editor
 			kIOSPluginsPath       +   "/libadmob-mediation.a",
 			kIOSPluginsPath       +   "/UnifiedNativeAdView.xib",
 			kAndroidPluginsPath   +   "/admob-mediation.aar",
-			kAssets               +   "/Consoliads/Editor/AdMobDependencies.xml",
 			kAssets               +   "/Consoliads/Editor/CAAdmobUninstallSettings.cs"
 		};
 

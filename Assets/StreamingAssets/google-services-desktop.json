@@ -66,6 +66,64 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:35fdd1b9fa3f5ace119f49",
+        "android_client_info": {
+          "package_name": "com.gt.car.racing.stunts.impossible.tracks2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696434869612:android:9eef8dafcec64124119f49",
+        "android_client_info": {
+          "package_name": "com.offroad.suv.driving.adventure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TA5i3esgljxPW-oVnaGXdS4mIiUoKIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696434869612-d5lp9b8loh175qj0v3q1fuq0v5c38rg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:696434869612:android:14d9d8efd3ec11c4119f49",
         "android_client_info": {
           "package_name": "com.real.impossible.bike.stunts2019.mega.ramp.games"

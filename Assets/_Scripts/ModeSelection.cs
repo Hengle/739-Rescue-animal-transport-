@@ -12,8 +12,11 @@ public class ModeSelection : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	public void _horsemood()
+    public void Back_Add_Load()
+    {
+        GaminatorAds._instance.SelectionSceneAds = false;
+    }
+    public void _horsemood()
 	{
 	    CustomAnalytics.logLevelStarted ("ModSelection","Zebra");
 		PlayerPrefs.SetInt ("MHorse",1);
@@ -83,11 +86,18 @@ public class ModeSelection : MonoBehaviour {
 		PlayerPrefs.SetInt ("MDog",1);
 
 	}
-
+    IEnumerator loadin_delay()
+    {
+        yield return new WaitForSeconds(3);
+        CustomAnalytics.logLevelStarted("levelBackBtn", "ModSelection");
+        Application.LoadLevel("MainMenu");
+    }
 	public void _back()
 	{
-		 CustomAnalytics.logLevelStarted ("levelBackBtn","ModSelection");
-		Application.LoadLevel ("MainMenu");
+        StartCoroutine(loadin_delay());
+        Loading.SetActive(true);
+		 //CustomAnalytics.logLevelStarted ("levelBackBtn","ModSelection");
+		//Application.LoadLevel ("MainMenu");
 	}
     public void SelectMode(GameObject currentmode)
     {

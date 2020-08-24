@@ -38,7 +38,6 @@ public class ServerConfig
 		//creating App JSON
 		var strJson = new JSONClass();
 		string contentEncoding = "";
-		strJson.Add(CAConstants.UNITY_EDITOR_VERSION_KEY, Application.unityVersion );
 		strJson.Add(CAConstants.PACKAGE_KEY, CAInstance.bundleIdentifier.ToString());
 		strJson.Add(CAConstants.TITLE_KEY, CAInstance.appName.ToString());
 		strJson.Add(CAConstants.SDK_VERSION_KEY, CAConstants.ConsoliAdsVersion);
@@ -91,24 +90,10 @@ public class ServerConfig
 			strJson[CAConstants.CHILED_DIRECTED_KEY].AsInt = 0;
 		}
 
-		if (CAInstance.DevMode)
-		{
-			strJson[CAConstants.DEV_MODE_KEY].AsInt = 1;
-		}
-		else
-		{
-			strJson[CAConstants.DEV_MODE_KEY].AsInt = 0;
-		}
-
 		strJson[CAConstants.STORE_KEY].AsInt = (int)CAInstance.platform;
 
 		for (int sequenceCounter = 0; sequenceCounter < CAInstance.scenesArray.Length; sequenceCounter++)
 		{
-			if ((int)CAInstance.scenesArray[sequenceCounter].placeholderName == 0)
-			{
-				return "Placeholders empty; Sync NOT possible.";
-			}
-
 			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.SEQUENCE_TITLE_ID_KEY].AsInt = (int)CAInstance.scenesArray[sequenceCounter].placeholderName;
 			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.SKIPFIRST_KEY] = CAInstance.scenesArray[sequenceCounter].interstitialAndVideoDetails.skipFirst.ToString();
 			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.FAILOVERAD_ID_KEY].AsInt = (int)(AdNetworkName)CAInstance.scenesArray[sequenceCounter].interstitialAndVideoDetails.failOver;
@@ -219,11 +204,11 @@ public class ServerConfig
 
 		strJson[CAConstants.APP_INTEGRATED_ADNETWORKS_KEY] = allAdNetworks[CAConstants.APP_INTEGRATED_ADNETWORKS_KEY];
 
+
 		var compressedJson = CAAdnetworkUtils.CompressJson(strJson.ToString());
 
-		Debug.Log("Request : configureServer" + strJson.ToString());
-
 		WWW result = CAInstance.postAppJson(networkCall(0, compressedJson));
+
 
 		if (!string.IsNullOrEmpty(result.error))
 		{
@@ -260,8 +245,6 @@ public class ServerConfig
 			{
 				resultResponse = result.text;
 			}
-
-			//Debug.Log("Respnse: configureServer" + resultResponse);
 
 			var responseArray = JSONNode.Parse(resultResponse);
 			if (responseArray != null)
@@ -384,10 +367,6 @@ public class ServerConfig
 			{
 				CAInstance.setShowAdMechanism(ConsoliAdsShowAdMechanism.Priority);
 			}
-			else if (responseArray[CAConstants.AD_SHOWN_MECHANISM_KEY] != null && responseArray[CAConstants.AD_SHOWN_MECHANISM_KEY].ToString().Contains("round_robin"))
-			{
-				CAInstance.setShowAdMechanism(ConsoliAdsShowAdMechanism.RoundRobin);
-			}
 
 			int hideAllAds = PlayerPrefs.GetInt("consoliads_hide_all_ads", 0);
 			if (hideAllAds == 1)
@@ -413,11 +392,10 @@ public class ServerConfig
 					//initializing each array item  of ad sequence
 					CAInstance.scenesArray[sequenceCounter] = new CAScene();
 					CAInstance.scenesArray[sequenceCounter].interstitialAndVideoDetails = new CAInterstitialMediationDetails();
+					//CAInstance.scenesArray[sequenceCounter].interactiveDetails = new CAInteractiveMediationDetails();
 					CAInstance.scenesArray[sequenceCounter].rewardedVideoDetails = new CARewardedVideoMediationDetails();
 					CAInstance.scenesArray[sequenceCounter].nativeDetails = new CANativeMediationDetails();
 					CAInstance.scenesArray[sequenceCounter].bannerDetails = new CABannerMediationDetails();
-					CAInstance.scenesArray[sequenceCounter].iconDetails = new CAIconMediationDetails();
-
 					//populating sequence values
 					if (responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.SKIPFIRST_KEY].AsInt == 1)
 					{
@@ -469,7 +447,7 @@ public class ServerConfig
 
 					}
 
-					/*
+                    /*
 					CAInstance.scenesArray[sequenceCounter].interactiveDetails.networkList = new AdNetworkNameInteractive[responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.INTERACTIVE_KEY].Count];
 					//populating ad sequence's Ads Array
 					for (int adCounter = 0; adCounter < responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.INTERACTIVE_KEY].Count; adCounter++)
@@ -480,16 +458,15 @@ public class ServerConfig
                     */
 
 					//populating native ad settings
-
-					CAInstance.scenesArray[sequenceCounter].nativeDetails.networkList = new AdNetworkNameNative[responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVEAD_KEY].Count];
-
 					if (responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVEAD_KEY] != null)
 					{
+						CAInstance.scenesArray[sequenceCounter].nativeDetails = new CANativeMediationDetails();
 						CAInstance.scenesArray[sequenceCounter].nativeDetails.failOver = (AdNetworkNameNative)responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_FAILOVERAD_ID_KEY].AsInt;
 						CAInstance.scenesArray[sequenceCounter].nativeDetails.enabled = responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_ENABLED_KEY].AsBool;
 						CAInstance.scenesArray[sequenceCounter].nativeDetails.width = responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_WIDTH_KEY].AsInt;
 						CAInstance.scenesArray[sequenceCounter].nativeDetails.height = responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_HEIGHT_KEY].AsInt;
 
+						CAInstance.scenesArray[sequenceCounter].nativeDetails.networkList = new AdNetworkNameNative[responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVEAD_KEY].Count];
 						//populating ad sequence's Ads Array
 						for (int adCounter = 0; adCounter < responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVEAD_KEY].Count; adCounter++)
 						{
@@ -498,19 +475,20 @@ public class ServerConfig
 					}
 					else
 					{
+						CAInstance.scenesArray[sequenceCounter].nativeDetails = new CANativeMediationDetails();
 						CAInstance.scenesArray[sequenceCounter].nativeDetails.enabled = false;
 					}
 					//populating native ad settings
 
-					CAInstance.scenesArray[sequenceCounter].bannerDetails.networkList = new AdNetworkNameBanner[responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNERAD_KEY].Count];
-
 					if (responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNERAD_KEY] != null)
 					{
+						CAInstance.scenesArray[sequenceCounter].bannerDetails = new CABannerMediationDetails();
 						CAInstance.scenesArray[sequenceCounter].bannerDetails.failOver = (AdNetworkNameBanner)responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_FAILOVERAD_ID_KEY].AsInt;						
 						CAInstance.scenesArray[sequenceCounter].bannerDetails.enabled = responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_ENABLED_KEY].AsBool;
 						CAInstance.scenesArray[sequenceCounter].bannerDetails.size = (BannerSize)responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_SIZE_KEY].AsInt;
 						CAInstance.scenesArray[sequenceCounter].bannerDetails.position = (BannerPosition)responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_POSITION_KEY].AsInt;
 
+						CAInstance.scenesArray[sequenceCounter].bannerDetails.networkList = new AdNetworkNameBanner[responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNERAD_KEY].Count];
 						//populating ad sequence's Ads Array
 						for (int adCounter = 0; adCounter < responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNERAD_KEY].Count; adCounter++)
 						{
@@ -520,17 +498,20 @@ public class ServerConfig
 					}
 					else
 					{
+						CAInstance.scenesArray[sequenceCounter].bannerDetails = new CABannerMediationDetails();
 						CAInstance.scenesArray[sequenceCounter].bannerDetails.enabled = false;
 					}
 
 					if (responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.ICONAD_KEY] != null)
 					{
+						CAInstance.scenesArray[sequenceCounter].iconDetails = new CAIconMediationDetails();
 						CAInstance.scenesArray[sequenceCounter].iconDetails.enabled = responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.ICONAD_KEY][CAConstants.ICON_ENABLED_KEY].AsBool;
 						CAInstance.scenesArray[sequenceCounter].iconDetails.adType = (AdNetworkNameIcon)responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.ICONAD_KEY][CAConstants.AD_ID_KEY].AsInt;
 						CAInstance.scenesArray[sequenceCounter].iconDetails.size = (IconSize)responseArray[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.ICONAD_KEY][CAConstants.ICON_SIZE_KEY].AsInt;
 					}
 					else
 					{
+						CAInstance.scenesArray[sequenceCounter].iconDetails = new CAIconMediationDetails();
 						CAInstance.scenesArray[sequenceCounter].iconDetails.enabled = false;
 					}
 				}
@@ -596,164 +577,6 @@ public class ServerConfig
 			}
 		}
 		return null;
-	}
-
-	public void preparePrefabData(ConsoliAds CAInstance)
-	{
-		//creating App JSON
-		var strJson = new JSONClass();
-		string contentEncoding = "";
-		strJson.Add(CAConstants.PACKAGE_KEY, CAInstance.bundleIdentifier.ToString());
-		strJson.Add(CAConstants.TITLE_KEY, CAInstance.appName.ToString());
-		strJson.Add(CAConstants.TOTAL_SEQUENCES_KEY, CAInstance.scenesArray.Length.ToString());
-		strJson.Add("message","completed");
-		if (CAInstance.getShowAdMechanism () == ConsoliAdsShowAdMechanism.Priority) 
-		{
-			strJson.Add (CAConstants.AD_SHOWN_MECHANISM_KEY, "priority");
-		} 
-		else 
-		{
-			strJson.Add (CAConstants.AD_SHOWN_MECHANISM_KEY, "round_robin");
-		}
-
-		if(CAInstance.platform == Platform.Google)
-		{
-			if (CAInstance.rateUsURL == "https://play.google.com/store/apps/details?id=")
-			{
-				strJson.Add(CAConstants.GP_RATEUS_URL_KEY, CAInstance.rateUsURL + CAInstance.bundleIdentifier);
-			}
-			else
-			{
-				strJson.Add(CAConstants.GP_RATEUS_URL_KEY, CAInstance.rateUsURL);
-			}
-		}
-		else
-		{
-			strJson.Add(CAConstants.AS_RATEUS_URL_KEY, CAInstance.rateUsURL);
-		}
-
-		if (CAInstance.isHideAds)
-			strJson[CAConstants.IS_HIDEAD_KEY].AsInt = 1;
-		else
-			strJson[CAConstants.IS_HIDEAD_KEY].AsInt = 0;
-
-		if (CAInstance.ShowLog)
-		{
-			strJson.Add( "mediationMode" ,"Test");
-		}
-
-		if (CAInstance.ChildDirected)
-		{
-			strJson[CAConstants.CHILED_DIRECTED_KEY].AsInt = 1;
-		}
-		else
-		{
-			strJson[CAConstants.CHILED_DIRECTED_KEY].AsInt = 0;
-		}
-
-		strJson[CAConstants.STORE_KEY].AsInt = (int)CAInstance.platform;
-
-		for (int sequenceCounter = 0; sequenceCounter < CAInstance.scenesArray.Length; sequenceCounter++)
-		{
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.SEQUENCE_TITLE_ID_KEY].AsInt = (int)CAInstance.scenesArray[sequenceCounter].placeholderName;
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.SKIPFIRST_KEY] = CAInstance.scenesArray[sequenceCounter].interstitialAndVideoDetails.skipFirst.ToString();
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.FAILOVERAD_ID_KEY].AsInt = (int)(AdNetworkName)CAInstance.scenesArray[sequenceCounter].interstitialAndVideoDetails.failOver;
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.REWARDED_SKIPFIRST_KEY] = CAInstance.scenesArray[sequenceCounter].rewardedVideoDetails.skipFirst.ToString();
-
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_ENABLED_KEY].AsBool = CAInstance.scenesArray[sequenceCounter].bannerDetails.enabled;
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_SIZE_KEY].AsInt = (int)CAInstance.scenesArray[sequenceCounter].bannerDetails.size;
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_POSITION_KEY].AsInt = (int)CAInstance.scenesArray[sequenceCounter].bannerDetails.position;
-
-			int bannerFailoverID = (int)(AdNetworkName)CAInstance.scenesArray[sequenceCounter].bannerDetails.failOver;
-			if (bannerFailoverID != 0)
-			{
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_FAILOVERAD_ID_KEY].AsInt = (int)(AdNetworkName)CAInstance.scenesArray[sequenceCounter].bannerDetails.failOver;
-			}
-			else
-			{
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNER_FAILOVERAD_ID_KEY].AsInt = -1;
-			}
-
-			int nativeFailoverID = (int)(AdNetworkName)CAInstance.scenesArray[sequenceCounter].nativeDetails.failOver;
-			if (nativeFailoverID != 0)
-			{
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_FAILOVERAD_ID_KEY].AsInt = (int)(AdNetworkName)CAInstance.scenesArray[sequenceCounter].nativeDetails.failOver;
-			}
-			else
-			{
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_FAILOVERAD_ID_KEY].AsInt = -1;
-			}
-
-			int rewardedFiloverID = (int)(AdNetworkName)CAInstance.scenesArray[sequenceCounter].rewardedVideoDetails.failOver;
-			if (rewardedFiloverID != 0)
-			{
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.REWARDED_FAILOVERAD_ID_KEY].AsInt = (int)(AdNetworkName)CAInstance.scenesArray[sequenceCounter].rewardedVideoDetails.failOver;
-			}
-			else
-			{
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.REWARDED_FAILOVERAD_ID_KEY].AsInt = -1;
-			}
-
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_ENABLED_KEY].AsBool = CAInstance.scenesArray[sequenceCounter].nativeDetails.enabled;
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_WIDTH_KEY].AsInt = CAInstance.scenesArray[sequenceCounter].nativeDetails.width;
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVE_HEIGHT_KEY].AsInt = CAInstance.scenesArray[sequenceCounter].nativeDetails.height;
-
-
-
-			for (int adCounter = 0; adCounter < CAInstance.scenesArray[sequenceCounter].interstitialAndVideoDetails.networkList.Length; adCounter++)
-			{
-				AdNetworkNameInterstitial ad = CAInstance.scenesArray[sequenceCounter].interstitialAndVideoDetails.networkList[adCounter];
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.INTERSTITIAL_VIDEO_KEY][adCounter][CAConstants.AD_ID_KEY].AsInt = (int)ad;
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.INTERSTITIAL_VIDEO_KEY][adCounter][CAConstants.AD_ORDER_KEY].AsInt = (adCounter + 1);
-			}
-
-			for (int adCounter = 0; adCounter < CAInstance.scenesArray[sequenceCounter].rewardedVideoDetails.networkList.Length; adCounter++)
-			{
-				AdNetworkNameRewardedVideo ad = CAInstance.scenesArray[sequenceCounter].rewardedVideoDetails.networkList[adCounter];
-
-				if ((int)ad == 0)
-					strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.REWARDEDVIDEO_KEY][adCounter][CAConstants.AD_ID_KEY].AsInt = -1;
-				else
-					strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.REWARDEDVIDEO_KEY][adCounter][CAConstants.AD_ID_KEY].AsInt = (int)ad;
-
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.REWARDEDVIDEO_KEY][adCounter][CAConstants.AD_ORDER_KEY].AsInt = (adCounter + 1);
-			}
-
-			for (int adCounter = 0; adCounter < CAInstance.scenesArray[sequenceCounter].nativeDetails.networkList.Length; adCounter++)
-			{
-				AdNetworkNameNative ad = CAInstance.scenesArray[sequenceCounter].nativeDetails.networkList[adCounter];
-
-				if ((int)ad == 0)
-					strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVEAD_KEY][adCounter][CAConstants.AD_ID_KEY].AsInt = -1;
-				else
-					strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVEAD_KEY][adCounter][CAConstants.AD_ID_KEY].AsInt = (int)ad;
-
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.NATIVEAD_KEY][adCounter][CAConstants.AD_ORDER_KEY].AsInt = (adCounter + 1);
-			}
-
-			for (int adCounter = 0; adCounter < CAInstance.scenesArray[sequenceCounter].bannerDetails.networkList.Length; adCounter++)
-			{
-				AdNetworkNameBanner ad = CAInstance.scenesArray[sequenceCounter].bannerDetails.networkList[adCounter];
-
-				if ((int)ad == 0)
-					strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNERAD_KEY][adCounter][CAConstants.AD_ID_KEY].AsInt = -1;
-				else
-					strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNERAD_KEY][adCounter][CAConstants.AD_ID_KEY].AsInt = (int)ad;
-
-				strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.BANNERAD_KEY][adCounter][CAConstants.AD_ORDER_KEY].AsInt = (adCounter + 1);
-			}
-
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.ICONAD_KEY][CAConstants.ICON_ENABLED_KEY].AsBool = CAInstance.scenesArray[sequenceCounter].iconDetails.enabled;
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.ICONAD_KEY][CAConstants.AD_ID_KEY].AsInt = (int)CAInstance.scenesArray[sequenceCounter].iconDetails.adType;
-			strJson[CAConstants.SEQUENCES_KEY][sequenceCounter][CAConstants.ICONAD_KEY][CAConstants.ICON_SIZE_KEY].AsInt = (int)CAInstance.scenesArray[sequenceCounter].iconDetails.size;
-
-		}
-
-		//Apending all ids to appJson
-		CAInstance.adIDList.setAdIDs(strJson , CAInstance.platform);
-
-		//sending json to mediation
-		ConsoliAds.Instance.onDataReceivedFromPlatform(strJson.ToString());
 	}
 
 }

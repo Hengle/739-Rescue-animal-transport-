@@ -7,7 +7,7 @@ public class PrivacyPolicyAd : MonoBehaviour
 
     [Header("ShowSmartBanner  SceneIndex ")]
     public int sceneIndex = 0;
-    
+
     private void OnEnable()
 	{
 
@@ -16,11 +16,11 @@ public class PrivacyPolicyAd : MonoBehaviour
             Debug.LogError("Add Scene Index in PrivacyPolicyAd");
         }
 
-       
+        GaminatorAds.Instance.HideBanner();
 	}
 	private void OnDisable()
 	{ 
-        
+        GaminatorAds.Instance.ShowSmartBanner(sceneIndex);
 	}
 
 }

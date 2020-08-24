@@ -28,7 +28,7 @@ public class CAFacebookAudienceUninstallSettings : Editor
             kIOSPluginsPath       +   "/View.xib",
             
             kAndroidPluginsPath   +   "/facebook-mediation.aar",
-            kAndroidPluginsPath   +   "/AudienceNetwork_v_5.9.0.aar",
+            kAndroidPluginsPath   +   "/AudienceNetwork.aar",
 
 			kAssets               +   "/Consoliads/Editor/FacebookDependencies.xml",
             kAssets               +   "/Consoliads/Editor/CAFacebookAudienceUninstallSettings.cs"

@@ -34,42 +34,33 @@ class ConsoliAdsMediationWrapper
 
 	public void loadRewarded(int index)
 	{
-		
 	}
 
-	public void showBanner(int index , ConsoliAdsBannerView consoliAdsBannerView)
+	public void showBanner(int index)
 	{
-		/*
-		switch (consoliAdsBannerView.getBannerType ()) 
-		{
-			case BannerType.PORTAL:
-			{
-				break;
-			}
-			case BannerType.CUSTOM_SIZE:
-			{
-				break;
-			}
-			case BannerType.CUSTOM_POSITION:
-			{
-				break;
-			}
-			case BannerType.CUSTOM_SIZE_POSITION:
-			{
-				break;
-			}
-		}*/
 	}
 
-	public void hideBanner(ConsoliAdsBannerView consoliAdsBannerView)
+	public void hideBanner()
 	{
-		
 	}
 
 	public void showInterstitial(int index)
 	{
 	}
+
+    public void showBanner(int index, double x, double y)
+    {
+    }
+
+	public void showBanner(int index, AdSize adsize)
+    {
 		
+    }
+
+	public void showBanner(int index, AdSize adsize, double x, double y)
+    {
+    }
+
     public void showRewardedVideo(int index)
 	{
 	}
@@ -94,7 +85,7 @@ class ConsoliAdsMediationWrapper
 
 	}
 
-	public void showIconAd(int instanceID,int index, float x, float y, float baseWidth, float baseHeight , int animationType)
+	public void showIconAd(int instanceID,int index, float x, float y, float baseWidth, float baseHeight)
 	{
 	}
 
@@ -123,11 +114,6 @@ class ConsoliAdsMediationWrapper
 	public void showInteractive(int index)
 	{
 		
-	}
-
-	public void onDataReceivedFromPlatform( string json )
-	{
-		Debug.Log ("Sending Data : "+ json);
 	}
 
 #elif UNITY_ANDROID
@@ -166,41 +152,43 @@ class ConsoliAdsMediationWrapper
 		}
 	}
 
-	public void showBanner(int index , ConsoliAdsBannerView consoliAdsBannerView)
+	public void showBanner(int index)
 	{
 		if (_plugin != null)
 		{
-			switch (consoliAdsBannerView.getBannerType ()) 
-			{
-			case BannerType.PORTAL:
-				{
-					_plugin.Call("showBanner", consoliAdsBannerView.getBannerID() , index);
-					break;
-				}
-			case BannerType.CUSTOM_SIZE:
-				{
-					_plugin.Call("showBanner", consoliAdsBannerView.getBannerID() , index , consoliAdsBannerView.getAdSize().width , consoliAdsBannerView.getAdSize().height );
-					break;
-				}
-			case BannerType.CUSTOM_POSITION:
-				{
-					_plugin.Call ("showBanner", consoliAdsBannerView.getBannerID (), index, consoliAdsBannerView.getAdPosition ().x, consoliAdsBannerView.getAdPosition ().y);
-					break;
-				}
-			case BannerType.CUSTOM_SIZE_POSITION:
-				{
-					_plugin.Call ("showBanner", consoliAdsBannerView.getBannerID (), index, consoliAdsBannerView.getAdSize().width , consoliAdsBannerView.getAdSize().height , consoliAdsBannerView.getAdPosition ().x, consoliAdsBannerView.getAdPosition ().y);
-					break;
-				}
-			}
+			_plugin.Call("showBanner", index);
 		}
 	}
 
-	public void hideBanner(ConsoliAdsBannerView consoliAdsBannerView)
+    public void showBanner(int index, double x, double y)
+    {
+        if (_plugin != null)
+        {
+            _plugin.Call("showBanner", index, x, y);
+        }
+    }
+
+	public void showBanner(int index,  AdSize adsize)
+    {
+        if (_plugin != null)
+        {
+			_plugin.Call("showBanner", index, adsize.width , adsize.height);
+        }
+    }
+
+	public void showBanner(int index,  AdSize adsize, double x, double y)
+    {
+        if (_plugin != null)
+        {
+			_plugin.Call("showBanner", index,adsize.width , adsize.height, x, y);
+        }
+    }
+
+    public void hideBanner()
 	{
 		if (_plugin != null)
 		{
-			_plugin.Call("hideBanner" , consoliAdsBannerView.getBannerID() );
+			_plugin.Call("hideBanner");
 		}
 	}
 
@@ -236,11 +224,11 @@ class ConsoliAdsMediationWrapper
 		}
 	}
 
-	public void showIconAd(int instanceID, int index, float x, float y, float baseWidth, float baseHeight, int animationType)
+	public void showIconAd(int instanceID, int index, float x, float y, float baseWidth, float baseHeight)
 	{
 		if (_plugin != null)
 		{
-	_plugin.Call("showIconAd",instanceID, index, KCoordinateSystemBottomLeft, baseWidth, baseHeight, x, y,animationType);
+			_plugin.Call("showIconAd",instanceID, index, KCoordinateSystemBottomLeft, baseWidth, baseHeight, x, y);
 		}
 	}
 
@@ -286,14 +274,6 @@ class ConsoliAdsMediationWrapper
 		}
 	}
 
-	public void onDataReceivedFromPlatform( string json )
-	{
-		if (_plugin != null)
-		{
-			_plugin.Call("onDataReceivedFromPlatform" , json);
-		}
-	}
-
     /*
 	public bool isInteractiveAvailable(int index)
 	{
@@ -319,9 +299,6 @@ class ConsoliAdsMediationWrapper
 	private static extern void _initializeWithProductName(string productName, string bundleIdentifier, string gameObjectName, bool consent, string ConsoliAdsVersion , string sdkVersionID, bool devMode);
 
 	[DllImport("__Internal")]
-	private static extern void _onDataReceivedFromPlatform(string json);
-
-	[DllImport("__Internal")]
 	private static extern void _showInterstitial(int scene);
 
 	[DllImport("__Internal")]
@@ -337,19 +314,19 @@ class ConsoliAdsMediationWrapper
 	private static extern void _showRewardedVideo(int scene);
 
 	[DllImport("__Internal")]
-	private static extern void _showBanner(int instanceID , int scene);
+	private static extern void _showBanner(int scene);
 
     [DllImport("__Internal")]
-	private static extern void _showBannerWithCustomPosition(int instanceID , int index, double x, double y);
+    private static extern void _showBannerWithCustomPosition(int index, double x, double y);
 
     [DllImport("__Internal")]
-	private static extern void _showBannerWithCustomSize(int instanceID , int index, int width, int height);
+    private static extern void _showBannerWithCustomSize(int index, int width, int height);
 
     [DllImport("__Internal")]
-	private static extern void _showBannerWithCustomSizeNPosition(int instanceID , int index, int width, int height, double x, double y);
+    private static extern void _showBannerWithCustomSizeNPosition(int index, int width, int height, double x, double y);
 
     [DllImport("__Internal")]
-	private static extern void _hideBanner(int instanceID);
+	private static extern void _hideBanner();
 
 	[DllImport("__Internal")]
 	private static extern void _hideAllAds();
@@ -361,7 +338,7 @@ class ConsoliAdsMediationWrapper
 	private static extern void _hideNativeAd(int scene);
 
 	[DllImport("__Internal")]
-	private static extern void _showIconAd(int instanceID, int scene, int coordinateSystemType, float screenWidth, float screenHeight, float x, float y, int animationType);
+	private static extern void _showIconAd(int instanceID, int scene, int coordinateSystemType, float screenWidth, float screenHeight, float x, float y);
 
 	[DllImport("__Internal")]
 	private static extern void _hideIconAd(int instanceID, int scene);
@@ -375,7 +352,7 @@ class ConsoliAdsMediationWrapper
 
 	public void initializeWithProductName(Platform platform, string productName, string bundleIdentifier, string gameObjectName, bool consent)
 	{
-	_initializeWithProductName(productName, bundleIdentifier, gameObjectName, consent,CAConstants.ConsoliAdsVersion , CAConstants.sdkVersionID, ConsoliAds.Instance.DevMode);
+	    _initializeWithProductName(productName, bundleIdentifier, gameObjectName, consent , CAConstants.ConsoliAdsVersion , CAConstants.sdkVersionID, ConsoliAds.Instance.DevMode);
 	}
 
 	public void loadRewarded(int index)
@@ -383,36 +360,29 @@ class ConsoliAdsMediationWrapper
 		_loadRewardedVideo(index);
 	}
 
-	public void showBanner(int index , ConsoliAdsBannerView consoliAdsBannerView)
+	public void showBanner(int index)
 	{
-		switch (consoliAdsBannerView.getBannerType ()) 
-		{
-		case BannerType.PORTAL:
-			{
-				_showBanner(consoliAdsBannerView.getBannerID(),index);
-				break;
-			}
-		case BannerType.CUSTOM_SIZE:
-			{
-				_showBannerWithCustomSize(consoliAdsBannerView.getBannerID(),index , consoliAdsBannerView.getAdSize().width , consoliAdsBannerView.getAdSize().height );
-				break;
-			}
-		case BannerType.CUSTOM_POSITION:
-			{
-				_showBannerWithCustomPosition(consoliAdsBannerView.getBannerID(),index, consoliAdsBannerView.getAdPosition ().x, consoliAdsBannerView.getAdPosition ().y);
-				break;
-			}
-		case BannerType.CUSTOM_SIZE_POSITION:
-			{
-				_showBannerWithCustomSizeNPosition(consoliAdsBannerView.getBannerID(),index , consoliAdsBannerView.getAdSize().width , consoliAdsBannerView.getAdSize().height , consoliAdsBannerView.getAdPosition ().x, consoliAdsBannerView.getAdPosition ().y );
-				break;
-			}
-		}
+		_showBanner(index);
 	}
 
-	public void hideBanner(ConsoliAdsBannerView consoliAdsBannerView)
+    public void showBanner(int index, double x, double y)
+    {
+        _showBannerWithCustomPosition(index, x, y);
+    }
+
+	public void showBanner(int index, AdSize adsize)
+    {
+		_showBannerWithCustomSize(index, adsize.width , adsize.height);
+    }
+
+	public void showBanner(int index, AdSize adsize, double x, double y)
+    {
+		_showBannerWithCustomSizeNPosition(index, adsize.width , adsize.height , x, y);
+    }
+
+    public void hideBanner()
 	{
-		_hideBanner(consoliAdsBannerView.getBannerID());
+		_hideBanner();
 	}
 
 	public void showInterstitial(int index)
@@ -445,9 +415,9 @@ class ConsoliAdsMediationWrapper
         _hideNativeAd(index);
     }
 
-	public void showIconAd(int instanceID, int index, float x, float y, float baseWidth, float baseHeight, int animationType)
+    public void showIconAd(int instanceID, int index, float x, float y, float baseWidth, float baseHeight)
     {
-	_showIconAd(instanceID, index, KCoordinateSystemBottomLeft, baseWidth, baseHeight, x, y,animationType);
+        _showIconAd(instanceID, index, KCoordinateSystemBottomLeft, baseWidth, baseHeight, x, y);
     }
 
 	public void destoryIconAd(int instanceID,int index)
@@ -464,12 +434,6 @@ class ConsoliAdsMediationWrapper
 	{
 		_addAdmobTestDevice(deviceID);
 	}
-
-	public void onDataReceivedFromPlatform( string json )
-	{
-		_onDataReceivedFromPlatform(json);
-	}
-
     /*
 	public bool isInteractiveAvailable(int index)
 	{

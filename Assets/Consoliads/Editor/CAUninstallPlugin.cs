@@ -41,14 +41,13 @@ public class CAUninstallPlugin
 		kAssets                                 +   "/Consoliads/Editor/ConsoliAdsUpdate.cs",
 		kAssets                                 +   "/Consoliads/Editor/PackageDownloader.cs",
 		kAssets                                 +   "/Consoliads/Editor/XMiniJSON.cs",
-		kAssets                                 +   "/Editor/ModifyUnityAndroidAppManifestSample .cs",
 
         kPluginsPath                            +   "/ConsoliDLL.dll",
         kPluginsPath                            +   "/ConsoliAdsSample.cs",
         kPluginsPath                            +   "/ConsoliAdsSample.cs",
         kPluginsPath                            +   "/ConsoliAdsSample.unity",
 
-		kAndroidPluginsPath                     +   "/volley-1.1.1.aar",
+		kAndroidPluginsPath                     +   "/volley-1.1.1.arr",
 		kAndroidPluginsPath                     +   "/android.arch.core.common-1.0.0.jar",
 		kAndroidPluginsPath                     +   "/android.arch.lifecycle.common-1.0.0.jar",
 		kAndroidPluginsPath                     +   "/AndroidManifest.xml",
@@ -72,7 +71,6 @@ public class CAUninstallPlugin
 		kAndroidPluginsPath                     +   "/play-services-ads-lite-15.0.1.aar",
 		kAndroidPluginsPath                     +   "/play-services-basement-15.0.1.aar",
 		kAndroidPluginsPath                     +   "/play-services-gass-15.0.1.aar",
-		kAndroidPluginsPath                     +   "/res/layout/ca_mediated_native_view.xml",
             
             kIOSPluginsPath                     +   "/ConsoliAdsIconAdSizes.h",
             kIOSPluginsPath                     +   "/ConsoliAdsMediationUnityManager.h",
@@ -93,20 +91,6 @@ public class CAUninstallPlugin
             kIOSPluginsPath                     +   "/IconAdBase.h",
             kIOSPluginsPath                     +   "/NativeAdBase.h",
 
-		kIOSPluginsPath                     +   "/BannerAdDelegate.h",
-		kIOSPluginsPath                     +   "/CAAdChoicesView.h",
-		kIOSPluginsPath                     +   "/CAMediatedBannerView.h",
-		kIOSPluginsPath                     +   "/CAMediatedNativeAd.h",
-		kIOSPluginsPath                     +   "/CANativeAdMediaView.h",
-		kIOSPluginsPath                     +   "/CANativeAdRenderingDelegate.h",
-		kIOSPluginsPath                     +   "/CANativeAdRequestDelegate.h",
-		kIOSPluginsPath                     +   "/ConsoliAdsMediation.h",
-		kIOSPluginsPath                     +   "/ConsoliAdsMediationIconAdDelegate.h",
-		kIOSPluginsPath                     +   "/IconAdDelegate.h",
-		kIOSPluginsPath                     +   "/MediationNativeAdView.h",
-		kIOSPluginsPath                     +   "/NativeAdView.h",
-		kIOSPluginsPath                     +   "/MediationNativeAdView.m",
-		kIOSPluginsPath                     +   "/MediationNativeAdView.xib",
 
         };
 

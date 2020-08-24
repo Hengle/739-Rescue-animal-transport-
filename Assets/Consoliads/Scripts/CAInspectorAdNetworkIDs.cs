@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
-using SimpleJSON;
 
 [Serializable]
 public class CAInspectorAdNetworkIDs
@@ -10,49 +9,46 @@ public class CAInspectorAdNetworkIDs
 	public AdmobIds Admob;
 	public ChartboostIds Chartboost;
 	public FacebookIds Facebook;
-	[HideInInspector] public OguryIds Ogury;
-	[HideInInspector] public MyTargetIds MyTarget;
-	[HideInInspector] public MintegralIds Mintegral; 
+	public OguryIds Ogury;
+	public MyTargetIds MyTarget;
+	public MintegralIds Mintegral;
 	//public AtmosplayIds Atmosplay;
-	[HideInInspector] public string LeadboltAppKey;
+	public string LeadboltAppKey;
 
-	[HideInInspector] public string KidozPubId;
-	[HideInInspector] public string KidozSecToken;
-	[HideInInspector] public string ConsoliadsAppKey;
-	[HideInInspector] public string HeyzapID;
-	[HideInInspector] public string RevmobMediaID;
-	[HideInInspector] public string UnityadsAppID;
-	[HideInInspector] public string AdcolonyAppID;
-	[HideInInspector] public string AdcolonyInterstitialZoneID;
-	[HideInInspector] public string AdcolonyRewardedZoneID;
-	[HideInInspector] public string AdColonyBannerZoneID;
-	[HideInInspector] public string IronsourceAppKey;
-	[HideInInspector] public string ApplovinID;
-	[HideInInspector] public string VungleID;
-	[HideInInspector] public string VunglePlacementName;
-	[HideInInspector] public string VungleBannerPlacement;
-	[HideInInspector] public string TapJoyID;
-	[HideInInspector] public string TapJoyPlacement;
-	[HideInInspector] public string MobVistaAppID;
-	[HideInInspector] public string MobVistaAppKey;
-	[HideInInspector] public string MobVistaInterstitialID;
-	[HideInInspector] public string MobVistaVideoID;
-	[HideInInspector] public string unityAdsBannerPlacement;
-	[HideInInspector] public string tapJoyRewardedPlacement;
-	[HideInInspector] public string vungleRewardedPlacementID;
-	[HideInInspector] public string InmobiAccountID;
-	[HideInInspector] public string InmobiInterstitialPlacement;
-	[HideInInspector] public string InmobiRewardedVideoPlacement;
-	[HideInInspector] public string InmobiBannerAdPlacement;
-	[HideInInspector] public string StartappDeveloperId;
-	[HideInInspector] public string StartappApplicationId;
-	[HideInInspector] public string MobfoxInterstitialAdUnit;
-	[HideInInspector] public string MobfoxRewardedVideoAdUnit;
-	[HideInInspector] public string MobfoxBannerAdUnit;
-	[HideInInspector] public string MopubIntesrstialAdUnit;
-	[HideInInspector] public string MopubRewardedAdUnit;
-	[HideInInspector] public string mopubBannerAdUnit;
-	[HideInInspector] public string mopubNativeAdUnit;
+	private string KidozPubId;
+	private string KidozSecToken;
+    private string ConsoliadsAppKey;
+    private string HeyzapID;
+    private string RevmobMediaID;
+    private string UnityadsAppID;
+    private string AdcolonyAppID;
+    private string AdcolonyInterstitialZoneID;
+    private string AdcolonyRewardedZoneID;
+    private string IronsourceAppKey;
+    private string ApplovinID;
+    private string VungleID;
+    private string VunglePlacementName;
+    private string TapJoyID;
+    private string TapJoyPlacement;
+    private string MobVistaAppID;
+    private string MobVistaAppKey;
+    private string MobVistaInterstitialID;
+    private string MobVistaVideoID;
+    private string unityAdsBannerPlacement;
+    private string tapJoyRewardedPlacement;
+    private string vungleRewardedPlacementID;
+    private string InmobiAccountID;
+    private string InmobiInterstitialPlacement;
+    private string InmobiRewardedVideoPlacement;
+    private string InmobiBannerAdPlacement;
+    private string StartappDeveloperId;
+    private string StartappApplicationId;
+    private string MobfoxInterstitialAdUnit;
+    private string MobfoxRewardedVideoAdUnit;
+    private string MobfoxBannerAdUnit;
+    private string MopubIntesrstialAdUnit;
+    private string MopubRewardedAdUnit;
+    private string mopubBannerAdUnit;
 
     [Serializable]
     public class OguryIds
@@ -104,8 +100,7 @@ public class CAInspectorAdNetworkIDs
 		public string MintegralInterstitialID;
 		public string MintegralRewardedID;
 		public string MintegralVideoID;
-		public string MintegralNativeID;
-		public string MintegralBannerPlacement;
+		//public string MintegralInteractiveID;
 	}
 
 	/*
@@ -148,6 +143,12 @@ public class CAInspectorAdNetworkIDs
 			case NetworkAdIDType.AdmobNativeAdID:
 				this.Admob.AdmobNativeAdUnitID = key;
 				break;
+			case NetworkAdIDType.HeyzapID:
+				this.HeyzapID = key;
+				break;
+			case NetworkAdIDType.RevmobMediaID:
+				this.RevmobMediaID = key;
+				break;
 			case NetworkAdIDType.UnityAdsID:
 				this.UnityadsAppID = key;
 				break;
@@ -160,14 +161,14 @@ public class CAInspectorAdNetworkIDs
 			case NetworkAdIDType.AdColonyRewardedZoneID:
 				this.AdcolonyRewardedZoneID = key;
 				break;
-			case NetworkAdIDType.AdColonyBannerZoneID:
-				this.AdColonyBannerZoneID = key;
-				break;
 			case NetworkAdIDType.IronsourceAppKey:
 				this.IronsourceAppKey = key;
 				break;
 			case NetworkAdIDType.AppLovinID:
 				this.ApplovinID = key;
+				break;
+			case NetworkAdIDType.LeadboltAppKey:
+				this.LeadboltAppKey = key;
 				break;
 			case NetworkAdIDType.VungleAdID:
 				this.VungleID = key;
@@ -177,6 +178,18 @@ public class CAInspectorAdNetworkIDs
 				break;
 			case NetworkAdIDType.TapJoyPlacement:
 				this.TapJoyPlacement = key;
+				break;
+			case NetworkAdIDType.MobVistaAppKey:
+				this.MobVistaAppKey = key;
+				break;
+			case NetworkAdIDType.MobVistaAPPID:
+				this.MobVistaAppID = key;
+				break;
+			case NetworkAdIDType.MobVistaInterstitialID:
+				this.MobVistaInterstitialID = key;
+				break;
+			case NetworkAdIDType.MobVistaVideoID:
+				this.MobVistaVideoID = key;
 				break;
 			case NetworkAdIDType.FacebookBannerID:
 				this.Facebook.FacebookBannerId = key;
@@ -232,24 +245,37 @@ public class CAInspectorAdNetworkIDs
 			case NetworkAdIDType.MobfoxBannerAdUnit:
 				this.MobfoxBannerAdUnit = key;
 				break;
+			case NetworkAdIDType.MyTargetInterstitialSlotID:
+				this.MyTarget.MyTargetInterstitialSlotID = key;
+				break;
+			case NetworkAdIDType.MyTargetBannerAdSlotID:
+				this.MyTarget.MyTargetBannerAdSlotID = key;
+				break;
+			case NetworkAdIDType.OguryAPIKey:
+				this.Ogury.OguryAPIKey = key;
+				break;
+			case NetworkAdIDType.OguryInterstitialAdUnit:
+				this.Ogury.OguryInterstitialAdUnit = key;
+				break;
+			case NetworkAdIDType.OguryRewardedVideoAdUnit:
+                this.Ogury.OguryRewardedVideoAdUnit = key;
+				break;
             case NetworkAdIDType.UnityAdsBannerPlacement:
                 this.unityAdsBannerPlacement = key;
                 break;
             case NetworkAdIDType.MopubBannerAdUnit:
                 this.mopubBannerAdUnit = key;
                 break;
-			case NetworkAdIDType.MopubNativeAdUnit:
-				this.mopubNativeAdUnit = key;
-				break;
+            case NetworkAdIDType.MyTargetRewardedAdSlotID:
+                this.MyTarget.myTargetRewardedAdSlotID = key;
+                break;
             case NetworkAdIDType.TapJoyRewardedPlacement:
                 this.tapJoyRewardedPlacement = key;
                 break;
             case NetworkAdIDType.VungleRewardedPlacementID:
                 this.vungleRewardedPlacementID = key;
                 break;
-			case NetworkAdIDType.VungleBannerPlacement:
-				this.VungleBannerPlacement = key;
-				break;
+
 			}
 		}
 	}
@@ -261,285 +287,4 @@ public class CAInspectorAdNetworkIDs
 			setupAdIds (value,platform,"",platform);
 		}
 	}
-
-	public void setAdIDs(JSONClass strJson  ,Platform platform)
-	{
-		int index = 0;
-	
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdmobAppID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Admob.AdmobAppID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdmobInterstitialAdUnitID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Admob.AdmobInterstitialAdUnitID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdmobRewardedVideoAdUnitID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Admob.AdmobRewardedVideoAdUnitID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdmobBannerAdUnitID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Admob.AdmobBannerAdUnitID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdmobNativeAdID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Admob.AdmobNativeAdUnitID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.ChartboostAppID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Chartboost.ChartboostAppID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.ChartboostAppSignature;
-		strJson ["adIDs"] [index] ["adValue"] = this.Chartboost.ChartboostAppSignature;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.FacebookInterstitialUnitID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Facebook.FacebookInterstitialUnitId;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.FacebookRewardedUnitID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Facebook.FacebookRewardedUnitId;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.FacebookBannerID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Facebook.FacebookBannerId;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.FacebookNativeID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Facebook.FacebookNativeId;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MintegralAPPID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Mintegral.MintegralAPPID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MintegralAppKey;
-		strJson ["adIDs"] [index] ["adValue"] = this.Mintegral.MintegralAppKey;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MintegralInterstitialID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Mintegral.MintegralInterstitialID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MintegralRewardedID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Mintegral.MintegralRewardedID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MintegralVideoID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Mintegral.MintegralVideoID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-	
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MintegralBannerPlacement;
-		strJson ["adIDs"] [index] ["adValue"] = this.Mintegral.MintegralBannerPlacement;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MintegralNativeID;
-		strJson ["adIDs"] [index] ["adValue"] = this.Mintegral.MintegralNativeID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.KidozPubID;
-		strJson ["adIDs"] [index] ["adValue"] = this.KidozPubId;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.KidozSecToken;
-		strJson ["adIDs"] [index] ["adValue"] = this.KidozSecToken;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.ConsoliadsAppKey;
-		strJson ["adIDs"] [index] ["adValue"] = this.ConsoliadsAppKey;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.UnityAdsID;
-		strJson ["adIDs"] [index] ["adValue"] = this.UnityadsAppID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.UnityAdsBannerPlacement;
-		strJson ["adIDs"] [index] ["adValue"] = this.unityAdsBannerPlacement;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdColonyAppID;
-		strJson ["adIDs"] [index] ["adValue"] = this.AdcolonyAppID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdColonyInterstitialZoneID;
-		strJson ["adIDs"] [index] ["adValue"] = this.AdcolonyInterstitialZoneID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdColonyRewardedZoneID;
-		strJson ["adIDs"] [index] ["adValue"] = this.AdcolonyRewardedZoneID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AdColonyBannerZoneID;
-		strJson ["adIDs"] [index] ["adValue"] = this.AdColonyBannerZoneID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.IronsourceAppKey;
-		strJson ["adIDs"] [index] ["adValue"] = this.IronsourceAppKey;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.AppLovinID;
-		strJson ["adIDs"] [index] ["adValue"] = this.ApplovinID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.VungleAdID;
-		strJson ["adIDs"] [index] ["adValue"] = this.VungleID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.VunglePlacementID;
-		strJson ["adIDs"] [index] ["adValue"] = this.VunglePlacementName;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.VungleRewardedPlacementID;
-		strJson ["adIDs"] [index] ["adValue"] = this.vungleRewardedPlacementID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.VungleBannerPlacement;
-		strJson ["adIDs"] [index] ["adValue"] = this.VungleBannerPlacement;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.TapJoyAdID;
-		strJson ["adIDs"] [index] ["adValue"] = this.TapJoyID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.TapJoyPlacement;
-		strJson ["adIDs"] [index] ["adValue"] = this.TapJoyPlacement;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.TapJoyRewardedPlacement;
-		strJson ["adIDs"] [index] ["adValue"] = this.tapJoyRewardedPlacement;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.InmobiAccountID;
-		strJson ["adIDs"] [index] ["adValue"] = this.InmobiAccountID;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.InmobiInterstitialPlacement;
-		strJson ["adIDs"] [index] ["adValue"] = this.InmobiInterstitialPlacement;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.InmobiRewardedVideoPlacement;
-		strJson ["adIDs"] [index] ["adValue"] = this.InmobiRewardedVideoPlacement;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.InmobiBannerAdPlacement;
-		strJson ["adIDs"] [index] ["adValue"] = this.InmobiBannerAdPlacement;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.StartAppDeveloperID;
-		strJson ["adIDs"] [index] ["adValue"] = this.StartappDeveloperId;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.StartAppApplicationID;
-		strJson ["adIDs"] [index] ["adValue"] = this.StartappApplicationId;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MopubIntesrstialAdUnit;
-		strJson ["adIDs"] [index] ["adValue"] = this.MopubIntesrstialAdUnit;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MopubRewardedAdUnit;
-		strJson ["adIDs"] [index] ["adValue"] = this.MopubRewardedAdUnit;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MopubBannerAdUnit;
-		strJson ["adIDs"] [index] ["adValue"] = this.mopubBannerAdUnit;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-
-		strJson ["adIDs"] [index] ["OS"].AsInt = (int)platform;
-		strJson ["adIDs"] [index] ["adValueType"].AsInt = (int)NetworkAdIDType.MopubNativeAdUnit;
-		strJson ["adIDs"] [index] ["adValue"] = this.mopubNativeAdUnit;
-		strJson ["adIDs"] [index] ["adID"] = "";
-		index++;
-	}
-		
 }

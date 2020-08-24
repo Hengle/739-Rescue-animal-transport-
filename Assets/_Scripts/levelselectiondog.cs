@@ -14,12 +14,13 @@ public class levelselectiondog : MonoBehaviour
 	public GameObject Levels;
 	//private int levelnumber;
 	public GameObject Loading;
+    public GameObject Loading_add;
 
 
 
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
 	{
 		
 
@@ -102,12 +103,12 @@ public class levelselectiondog : MonoBehaviour
     }
     public void OnPlay ()
 	{
-//		if (lastno != 0) {
+        //		if (lastno != 0) {
 
 
-//			SoundManager.Instance.ButtonSound ();
+        //			SoundManager.Instance.ButtonSound ();
 
-			Loading.SetActive (true);
+        Loading_add.SetActive (true);
 			print ("levels");
 			PlayerPrefs.SetInt ("DogLevel", lastno);
 		StartCoroutine (LoadScene ());

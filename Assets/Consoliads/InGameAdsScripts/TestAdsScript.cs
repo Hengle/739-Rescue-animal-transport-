@@ -6,9 +6,7 @@ public class TestAdsScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public int SceneIndex, BigSceneIndex;
-    ConsoliAdsBannerView consoliAdsBannerView =new ConsoliAdsBannerView();
-	ConsoliAdsBannerView consoliAdsBannerView2 = new ConsoliAdsBannerView();
-	public GameObject LoadingAd;
+    public GameObject LoadingAd;
     void Start()
     {
         Banner();
@@ -16,15 +14,15 @@ public class TestAdsScript : MonoBehaviour
     }
     public void Banner()
     {
-        GaminatorAds.Instance.ShowSmartBanner(SceneIndex, consoliAdsBannerView);
+        GaminatorAds.Instance.ShowSmartBanner(SceneIndex);
     }
     public void BigBanner()
     {
-        GaminatorAds.Instance.ShowSmartBanner(BigSceneIndex, consoliAdsBannerView2);
+        GaminatorAds.Instance.ShowSmartBanner(BigSceneIndex);
     }
     public void HideBanner()
     {
-        GaminatorAds.Instance.HideBanner(consoliAdsBannerView);
+        GaminatorAds.Instance.HideBanner();
     }
     public void ShowInterstitial()
     {

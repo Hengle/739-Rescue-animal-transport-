@@ -245,9 +245,32 @@ public class CAAdnetworkUtils {
 					}
 					break;
 
+				case AdNetworkName.REVMOBFULLSCREEN:
+				case AdNetworkName.REVMOBVIDEO:
+				case AdNetworkName.REVMOBREWARDEDVIDEO:
+					{
+						switch (sdkScript.platform)
+						{
+							case Platform.Apple:
+								if (mediationFileList.Contains("librevmob-mediation.a"))
+								{
+									isAdavailable = true;
+								}
+								break;
+							case Platform.Google:
+							case Platform.Amazon:
+								if (mediationFileList.Contains("revmob-mediation.aar"))
+								{
+									isAdavailable = true;
+								}
+								break;
+	
+							}
+					}
+					break;
+
 				case AdNetworkName.ADCOLONY:
 				case AdNetworkName.ADCOLONYREWARDEDVIDEO:
-				case AdNetworkName.ADCOLONYBANNER:
 					{
 						switch (sdkScript.platform)
 						{
@@ -290,9 +313,54 @@ public class CAAdnetworkUtils {
 					}
 					break;
 
+				case AdNetworkName.LEADBOLTINTERSTITIAL:
+				case AdNetworkName.LEADBOLTREWARDEDVIDEO:
+                    {
+                        switch (sdkScript.platform)
+						{
+							case Platform.Apple:
+								if (mediationFileList.Contains("libleadbolt-mediation.a"))
+								{
+									isAdavailable = true;
+								}
+								break;
+							case Platform.Google:
+							case Platform.Amazon:
+								if (mediationFileList.Contains("leadbolt-mediation.aar"))
+								{
+									isAdavailable = true;
+								}
+								break;
+						}
+					}
+					break;
+
+				case AdNetworkName.HEYZAPINTERSTITIAL:
+				case AdNetworkName.HEYZAPVIDEO:
+                case AdNetworkName.HEYZAPBANNER:
+                case AdNetworkName.HEYZAPREWARDEDVIDEO:
+                    {
+                        switch (sdkScript.platform)
+						{
+							case Platform.Apple:
+								if (mediationFileList.Contains("libheyzap-mediation.a"))
+								{
+									isAdavailable = true;
+								}
+								break;
+							case Platform.Google:
+							case Platform.Amazon:
+								if (mediationFileList.Contains("heyzap-mediation.aar"))
+								{
+									isAdavailable = true;
+								}
+								break;
+						}
+					}
+					break;
+
 				case AdNetworkName.VUNGLEADS:
                 case AdNetworkName.VUNGLEREWARDED:
-				//case AdNetworkName.VUNGLEBANNER:
                     {
                         switch (sdkScript.platform)
 						{
@@ -305,6 +373,28 @@ public class CAAdnetworkUtils {
 							case Platform.Google:
 							case Platform.Amazon:
 								if (mediationFileList.Contains("vungle-mediation.aar"))
+								{
+									isAdavailable = true;
+								}
+								break;
+						}
+					}
+					break;
+
+				case AdNetworkName.MOBVISTAINTERSTITIAL:
+				case AdNetworkName.MOBVISTAREWARDEDVIDEO:
+					{
+						switch (sdkScript.platform)
+						{
+							case Platform.Apple:
+								if (mediationFileList.Contains("libmobvista-mediation.a"))
+								{
+									isAdavailable = true;
+								}
+								break;
+							case Platform.Google:
+							case Platform.Amazon:
+								if (mediationFileList.Contains("mobvista-mediation.aar"))
 								{
 									isAdavailable = true;
 								}
@@ -340,7 +430,6 @@ public class CAAdnetworkUtils {
 				case AdNetworkName.STARTAPPINTERSTITIAL:
 				case AdNetworkName.STARTAPPREWARDEDVIDEO:
                 case AdNetworkName.STARTAPPBANNER:
-				case AdNetworkName.STARTAPPNATIVE:
                     {
                         switch (sdkScript.platform)
 						{
@@ -387,7 +476,6 @@ public class CAAdnetworkUtils {
 				case AdNetworkName.MOPUBINTERSTITIAL:
 				case AdNetworkName.MOPUBREWARDEDVIDEO:
                 case AdNetworkName.MOPUBBANNER:
-				case AdNetworkName.MOPUBNATIVE:
                     {
                         switch (sdkScript.platform)
 						{
@@ -432,6 +520,7 @@ public class CAAdnetworkUtils {
 					break;
 
 				case AdNetworkName.MOBFOXINTERSTITIAL:
+				case AdNetworkName.MOBFOXREWARDEDVIDEO:
 				case AdNetworkName.MOBFOXBANNER:
                     {
                         switch (sdkScript.platform)
@@ -453,12 +542,55 @@ public class CAAdnetworkUtils {
 					}
 					break;
 
+				case AdNetworkName.OGURYINTERSTITIAL:
+				case AdNetworkName.OGURYREWARDEDVIDEO:
+					{
+						switch (sdkScript.platform)
+						{
+							case Platform.Apple:
+								if (mediationFileList.Contains("libogury-mediation.a"))
+								{
+									isAdavailable = true;
+								}
+								break;
+							case Platform.Google:
+							case Platform.Amazon:
+								if (mediationFileList.Contains("ogury-mediation.aar"))
+								{
+									isAdavailable = true;
+								}
+								break;
+						}
+					}
+					break;
+
+				case AdNetworkName.MYTARGETBANNERAD:
+				case AdNetworkName.MYTARGETINTERSTITIAL:
+                case AdNetworkName.MYTARGETREWARDED:
+                    {
+                        switch (sdkScript.platform)
+						{
+							case Platform.Apple:
+								if (mediationFileList.Contains("libmytarget-mediation.a"))
+								{
+									isAdavailable = true;
+								}
+								break;
+							case Platform.Google:
+							case Platform.Amazon:
+								if (mediationFileList.Contains("mytarget-mediation.aar"))
+								{
+									isAdavailable = true;
+								}
+								break;
+						}
+					}
+					break;
+
 			case AdNetworkName.MINTEGRALINTERSTITIAL:
 			case AdNetworkName.MINTEGRALVIDEO:
 			//case AdNetworkName.MINTEGRALINTERACTIVE:
 			case AdNetworkName.MINTEGRALREWARDEDVIDEO:
-			case AdNetworkName.MINTEGRALBANNER:
-			case AdNetworkName.MINTEGRALNATIVE:
 				{
 					switch (sdkScript.platform)
 					{
@@ -478,6 +610,29 @@ public class CAAdnetworkUtils {
 					}
 				}
 				break;
+				/*
+			case AdNetworkName.ATMOSPLAYINTERSTITIAL:
+			case AdNetworkName.ATMOSPLAYREWARDEDVIDEO:
+			case AdNetworkName.ATMOSPLAYNATIVE:
+				{
+					switch (sdkScript.platform)
+					{
+					case Platform.Apple:
+						if (mediationFileList.Contains("libatmosplay-mediation.a"))
+						{
+							isAdavailable = true;
+						}
+						break;
+					case Platform.Google:
+					case Platform.Amazon:
+						if (mediationFileList.Contains("atmosplay-mediation.aar"))
+						{
+							isAdavailable = true;
+						}
+						break;
+					}
+				}
+				break;*/
 
 			}
 

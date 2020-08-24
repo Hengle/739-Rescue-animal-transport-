@@ -77,5 +77,12 @@ public class MainMenu : MonoBehaviour {
         async = SceneManager.LoadSceneAsync(_sceneIndex);
         yield return async;
     }
-
+    public void Add_Load()
+    {
+        GaminatorAds._instance.SelectionSceneAds = true;
+    }
+    public void Back_Add_Load()
+    {
+        GaminatorAds._instance.SelectionSceneAds = false;
+    }
 }

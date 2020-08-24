@@ -30,17 +30,14 @@ public class ConsoliAds : MonoBehaviour
 	public static event Action onBannerAdShownEvent;
 	public static event Action onBannerAdFailToShowEvent;
 	public static event Action onBannerAdClickEvent;
-	public static event Action onBannerAdRefreshEvent;
 
 	public static event Action onIconAdShownEvent;
 	public static event Action onIconAdFailedToShowEvent;
-	public static event Action onIconAdCloseEvent;
+	public static event Action onIconAdClosedEvent;
 	public static event Action onIconAdClickEvent;
-	public static event Action onIconAdRefreshEvent;
 
-	public static event Action onNativeAdShownEvent;
-	public static event Action onNativeAdFailedToShownEvent;
-	public static event Action onNativeAdClickEvent;
+	public static event Action onNativeAdLoadedEvent;
+	public static event Action onNativeAdFailedToLoadEvent;
 
 	public static event Action onConsoliAdsInitializationSuccess;
 
@@ -55,22 +52,14 @@ public class ConsoliAds : MonoBehaviour
 	public string rateUsURL;
 
 	public string supportEmail;
-	public ConsoliAdsShowAdMechanism showAdMechanism = ConsoliAdsShowAdMechanism.Priority;
+	public ConsoliAdsShowAdMechanism showAdMechanism = ConsoliAdsShowAdMechanism.RoundRobin;
 
-	[HideInInspector] public bool isHideAds = false;
-	[HideInInspector] public bool ShowLog = true;
-	[HideInInspector] public bool ChildDirected = false;
+    public bool isHideAds = false;
+    public bool ShowLog = true;
+    public bool ChildDirected = false;
 	public bool DevMode = true;
     public CAScene[] scenesArray;
 	public CAInspectorAdNetworkIDs adIDList;
-
-	private bool isInitialized = false;
-
-	public bool IsInitialized {
-		get {
-			return isInitialized;
-		}
-	}
 
     void Awake()
     {
@@ -96,7 +85,7 @@ public class ConsoliAds : MonoBehaviour
 			consoliAdsMediation.initializeWithProductName(platform ,appName,
 			                                              bundleIdentifier,
 			                                              gameObjectName,
-														  userConsent);
+			                                              userConsent);
 		}
 	}
 
@@ -181,14 +170,29 @@ public class ConsoliAds : MonoBehaviour
 		consoliAdsMediation.loadRewarded(index);
 	}
 
-	public void ShowBanner(int index , ConsoliAdsBannerView consoliAdsBannerView)
+	public void ShowBanner(int index)
 	{
-		consoliAdsMediation.showBanner(index , consoliAdsBannerView);
+		consoliAdsMediation.showBanner(index);
 	}
-		
-	public void HideBanner(ConsoliAdsBannerView consoliAdsBannerView)
+
+    public void ShowBanner(int index, double x , double y)
+    {
+        consoliAdsMediation.showBanner(index, x, y);
+    }
+
+	public void ShowBanner(int index,AdSize adsize)
+    {
+		consoliAdsMediation.showBanner(index,adsize);
+    }
+
+	public void ShowBanner(int index, AdSize adsize, double x, double y)
+    {
+		consoliAdsMediation.showBanner(index, adsize, x, y);
+    }
+
+    public void HideBanner()
 	{
-		consoliAdsMediation.hideBanner(consoliAdsBannerView);
+		consoliAdsMediation.hideBanner();
 	}
 
 	public void ShowInterstitial(int index)
@@ -226,7 +230,7 @@ public class ConsoliAds : MonoBehaviour
 		consoliAdsMediation.showNativeAd(index, rect.x, rect.y , baseWidth, baseHeight);	
 	}
 
-	public void ShowIconAd(GameObject gameObject, int index , IconAnimationType animationType)
+	public void ShowIconAd(GameObject gameObject, int index)
 	{
 
 		RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
@@ -246,7 +250,7 @@ public class ConsoliAds : MonoBehaviour
 
 		int instanceID = gameObject.GetInstanceID();
 
-		consoliAdsMediation.showIconAd(instanceID, index, rect.x, rect.y, baseWidth, baseHeight , (int)animationType);	
+		consoliAdsMediation.showIconAd(instanceID, index, rect.x, rect.y, baseWidth, baseHeight);	
 	}
 
 	private Rect getGameObjectRect(GameObject gObject, RectTransform rectTransform, Camera cam)
@@ -434,20 +438,14 @@ public class ConsoliAds : MonoBehaviour
 
 	public void onNativeAdLoaded(string empty)
 	{ 
-		if (onNativeAdShownEvent != null)
-			onNativeAdShownEvent ();
+		if (onNativeAdLoadedEvent != null)
+			onNativeAdLoadedEvent ();
 	}
 
 	public void onNativeAdFailedToLoad(string empty)
 	{ 
-		if (onNativeAdFailedToShownEvent != null)
-			onNativeAdFailedToShownEvent ();
-	}
-
-	public void onNativeAdClicked(string empty)
-	{ 
-		if (onNativeAdClickEvent != null)
-			onNativeAdClickEvent ();
+		if (onNativeAdFailedToLoadEvent != null)
+			onNativeAdFailedToLoadEvent ();
 	}
 
 	public void onBannerAdShown(string empty)
@@ -468,42 +466,28 @@ public class ConsoliAds : MonoBehaviour
 			onBannerAdClickEvent();
 	}
 
-	public void onBannerAdRefresh(string empty)
-	{
-		if (onBannerAdRefreshEvent != null)
-			onBannerAdRefreshEvent();
-	}
-
-	public void didCloseIconAd(string empty)
-	{
-		if (onIconAdCloseEvent != null)
-			onIconAdCloseEvent();
-
-	}
-	public void didClickIconAd(string empty)
-	{
-		if (onIconAdClickEvent != null)
-			onIconAdClickEvent();
-
-	}
-	public void didDisplayIconAd(string empty)
+	public void onIconAdShown(string empty)
 	{
 		if (onIconAdShownEvent != null)
 			onIconAdShownEvent();
-
-	}
-	public void didRefreshIconAd(string empty)
-	{
-		if (onIconAdRefreshEvent != null)
-			onIconAdRefreshEvent();
-
 	}
 
-	public void didFailedToLoadIconAd(string empty)
+	public void onIconAdFailedToShow(string empty)
 	{
 		if (onIconAdFailedToShowEvent != null)
 			onIconAdFailedToShowEvent();
+	}
 
+	public void onIconAdClosed(string empty)
+	{
+		if (onIconAdClosedEvent != null)
+			onIconAdClosedEvent();
+	}
+
+	public void onIconAdClick(string empty)
+	{
+		if (onIconAdClickEvent != null)
+			onIconAdClickEvent();
 	}
 		
 
@@ -523,23 +507,7 @@ public class ConsoliAds : MonoBehaviour
 
 	public void onResponseRecieve(string response)
 	{
-        isInitialized = true; 
-        ServerConfig.Instance.setNativeMediationResponse (response , ConsoliAds.Instance );
-	}
-
-	public void getDataFromPlatform(string platformType)
-	{
-		int value = Int32.Parse (platformType);
-		Platform selectedPlatform = (Platform)value;
-		this.platform = selectedPlatform;
-		ServerConfig.Instance.preparePrefabData (ConsoliAds.Instance);
-	}
-
-	public void onDataReceivedFromPlatform(string data)
-	{
-		if (consoliAdsMediation != null) {
-			consoliAdsMediation.onDataReceivedFromPlatform (data);
-		}
+		ServerConfig.Instance.setNativeMediationResponse (response , ConsoliAds.Instance );
 	}
 
 	#endregion
