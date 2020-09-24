@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoodManager : MonoBehaviour {
 	public GameObject _env,_HorseMode,_LionMode,_SheepMode,_CowMode,_DeerMode,_dogMode;
@@ -71,7 +72,7 @@ public class MoodManager : MonoBehaviour {
 	{
 
 		Time.timeScale = 1f;
-		Application.LoadLevel ("Gameplay");
+		SceneManager.LoadScene("Gameplay");
 		
 		 CustomAnalytics.logLevelStarted ("Gameplay","_restart");
 	}
@@ -79,7 +80,7 @@ public class MoodManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(5);
         Time.timeScale = 1f;
-        Application.LoadLevel("MainMenu");
+        SceneManager.LoadScene("MainMenu");
         GaminatorAds._instance.show_MainMenu_Ad = true;
 
         CustomAnalytics.logLevelStarted("gameplay", "homebtn");
@@ -87,7 +88,7 @@ public class MoodManager : MonoBehaviour {
 	public void _home()
 	{
         StartCoroutine(loading_delay());
-        Quality_loading.SetActive(true);
+       //Quality_loading.SetActive(true);
         Time.timeScale = 1f;
 
     }
@@ -102,10 +103,10 @@ public class MoodManager : MonoBehaviour {
 			int currentlevel = PlayerPrefs.GetInt ("HLevel");
 			if (currentlevel < 5) {
 				PlayerPrefs.SetInt ("HLevel", currentlevel + 1);
-				Application.LoadLevel ("Gameplay");
+                SceneManager.LoadScene("Gameplay");
 			}
 			else if(currentlevel==5){
-				Application.LoadLevel ("LevelSelection");
+                SceneManager.LoadScene("LevelSelection");
 		}
 		}
 		else	if(PlayerPrefs.GetInt("MLion")==1)
@@ -114,11 +115,11 @@ public class MoodManager : MonoBehaviour {
 
 			if (currentlevel < 5) {
 				PlayerPrefs.SetInt ("LLevel", currentlevel+1);
-				Application.LoadLevel ("Gameplay");
+                SceneManager.LoadScene("Gameplay");
 
 			}
 			else if(currentlevel==5){
-				Application.LoadLevel ("LevelSelection");
+                SceneManager.LoadScene("LevelSelection");
 
 			}
 		}
@@ -129,10 +130,10 @@ public class MoodManager : MonoBehaviour {
 
 			if (currentlevel < 5) {
 				PlayerPrefs.SetInt ("SLevel", currentlevel+1);
-				Application.LoadLevel ("Gameplay");
+                SceneManager.LoadScene("Gameplay");
 			}
 			else if(currentlevel==5){
-				Application.LoadLevel ("LevelSelection");
+                SceneManager.LoadScene("LevelSelection");
 			}
 		}
 
@@ -142,10 +143,10 @@ public class MoodManager : MonoBehaviour {
 
 			if (currentlevel < 5) {
 				PlayerPrefs.SetInt ("CLevel", currentlevel+1);
-				Application.LoadLevel ("Gameplay");
+                SceneManager.LoadScene("Gameplay");
 			}
 			else if(currentlevel==5){
-				Application.LoadLevel ("LevelSelection");
+                SceneManager.LoadScene("LevelSelection");
 			}
 		}
 
@@ -155,10 +156,10 @@ public class MoodManager : MonoBehaviour {
 
 			if (currentlevel < 5) {
 				PlayerPrefs.SetInt ("DLevel", currentlevel+1);
-				Application.LoadLevel ("Gameplay");
+                SceneManager.LoadScene("Gameplay");
 			}
 			else if(currentlevel==5){
-				Application.LoadLevel ("LevelSelection");
+                SceneManager.LoadScene("LevelSelection");
 			}
 			
 		}
@@ -171,10 +172,10 @@ public class MoodManager : MonoBehaviour {
 
 			if (currentlevel < 5) {
 				PlayerPrefs.SetInt ("DogLevel", currentlevel+1);
-				Application.LoadLevel ("Gameplay");
+                SceneManager.LoadScene("Gameplay");
 			}
 			else if(currentlevel==5){
-				Application.LoadLevel ("LevelSelection");
+                SceneManager.LoadScene("LevelSelection");
 			}
 
 		}

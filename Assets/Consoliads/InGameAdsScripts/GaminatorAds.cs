@@ -6,6 +6,36 @@ using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.Events;
 using GameAnalyticsSDK;
+
+[Serializable]
+public class AdIconsData
+{
+    public string texLink;
+    public string appIdentifier;
+    public Texture tex;
+    public AdIconsData(string _link)
+    {
+        texLink = _link;
+        appIdentifier = GetPackageNameFromLink(_link);
+    }
+    private string GetPackageNameFromLink(string _link)
+    {
+        string[] div1 = _link.Split('/');
+        string[] div2 = div1[div1.Length - 1].Split('?');
+        string[] div3 = div2[0].Split('.');
+        string packageName = "";
+        for (int i = 0; i < div3.Length - 1; i++)
+        {
+            if (i > 0)
+                packageName += "." + div3[i];
+            else
+                packageName += div3[i];
+        }
+        return packageName;
+    }
+}
+
+
 public class GaminatorAds : MonoBehaviour
 {
 
@@ -17,6 +47,16 @@ public class GaminatorAds : MonoBehaviour
     //public GameObject nativePanel,adIcon;
 
     // Start is called before the first frame update
+
+      private static AdIconHandler adIconHandler;
+    public static AdIconHandler AdIconHandler
+    {
+        get
+        {
+            return adIconHandler;
+        }
+    }
+
     private void Awake()
     {
         GameAnalytics.Initialize();
@@ -63,6 +103,7 @@ public class GaminatorAds : MonoBehaviour
        
         if(!PlayerPrefManager.Instance.IsAdsRemoved())
         initializeAds();
+        adIconHandler = GetComponent<AdIconHandler>();
     }
 
     // Update is called once per frame

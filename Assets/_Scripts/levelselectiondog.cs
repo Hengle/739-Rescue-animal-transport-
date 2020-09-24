@@ -27,18 +27,26 @@ public class levelselectiondog : MonoBehaviour
 		lastno = 0;
 		int no = PlayerPrefs.GetInt ("DogUnlockLevels");
 		int UnlockedLevel = PlayerPrefs.GetInt ("DogUnlockLevels");
+		print("no :"+no);
 		if (no == 0) { 
 			//  no= 1;
 
 			PlayerPrefs.SetInt ("DogUnlockLevels", 1);
 		
 		}
+		//for (int i = 1; i <=5; i++)
+		//{
+		//	Levels.transform.GetChild(i).GetComponent<Button>().interactable = false;
+		//}
 		for (int i = 1; i < no; i++) {
 			Levels.transform.GetChild (i).GetChild (1).gameObject.SetActive (false);
 		}
-	
+		for (int i = 0; i < no; i++)
+		{
+			Levels.transform.GetChild(i).GetComponent<Button>().interactable = true;
+		}
 
-	
+
 
 	}
 
